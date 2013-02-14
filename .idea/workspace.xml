@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="e03065e2-c05f-4d0d-8dda-c4997c751d3c" name="Default" comment="" />
+    <list default="true" readonly="true" id="e03065e2-c05f-4d0d-8dda-c4997c751d3c" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/api/migrations/0002_auto.py" afterPath="$PROJECT_DIR$/api/migrations/0002_auto__add_field_player_status.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/api.db" afterPath="$PROJECT_DIR$/db/api.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/api/migrations/0001_initial.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/api_models.py" afterPath="$PROJECT_DIR$/api/api_models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/models.py" afterPath="$PROJECT_DIR$/api/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soft338/urls.py" afterPath="$PROJECT_DIR$/soft338/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <list id="9a375106-136a-4493-82c6-4e78b33fd1b6" name="New changelist" comment="" />
     <ignored path="soft338.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/settings.py" changelist="e03065e2-c05f-4d0d-8dda-c4997c751d3c" time="1360418078996" ignored="false" />
     <file path="/api.py" changelist="e03065e2-c05f-4d0d-8dda-c4997c751d3c" time="1360418741924" ignored="false" />
-    <file path="/urls.py" changelist="e03065e2-c05f-4d0d-8dda-c4997c751d3c" time="1360789173030" ignored="false" />
+    <file path="/urls.py" changelist="e03065e2-c05f-4d0d-8dda-c4997c751d3c" time="1360857382357" ignored="false" />
     <file path="/admin.py" changelist="e03065e2-c05f-4d0d-8dda-c4997c751d3c" time="1360418816634" ignored="false" />
-    <file path="/api_models.py" changelist="e03065e2-c05f-4d0d-8dda-c4997c751d3c" time="1360844297487" ignored="false" />
-    <file path="/models.py" changelist="e03065e2-c05f-4d0d-8dda-c4997c751d3c" time="1360845131411" ignored="false" />
-    <file path="/Django Console" changelist="e03065e2-c05f-4d0d-8dda-c4997c751d3c" time="1360844000773" ignored="false" />
+    <file path="/api_models.py" changelist="e03065e2-c05f-4d0d-8dda-c4997c751d3c" time="1360862680411" ignored="false" />
+    <file path="/models.py" changelist="e03065e2-c05f-4d0d-8dda-c4997c751d3c" time="1360862964391" ignored="false" />
+    <file path="/Django Console" changelist="e03065e2-c05f-4d0d-8dda-c4997c751d3c" time="1360862403419" ignored="false" />
     <file path="$PROJECT_DIR$/../Triathlon Leaderboard/grapher.py" changelist="e03065e2-c05f-4d0d-8dda-c4997c751d3c" time="1360842162309" ignored="false" />
-    <file path="/Dummy.txt" changelist="e03065e2-c05f-4d0d-8dda-c4997c751d3c" time="1360845343850" ignored="false" />
+    <file path="/Dummy.txt" changelist="e03065e2-c05f-4d0d-8dda-c4997c751d3c" time="1360845470346" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +51,10 @@
       <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="547" selection-end="547" vertical-scroll-proportion="0.7570093">
-              <folding />
+            <state line="45" column="4" selection-start="949" selection-end="949" vertical-scroll-proportion="0.7413793">
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -51,7 +62,18 @@
       <file leaf-file-name="api_models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/api_models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="39" selection-start="847" selection-end="847" vertical-scroll-proportion="0.0">
+            <state line="74" column="0" selection-start="1961" selection-end="1961" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#24#78#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="resources.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file:///usr/local/lib/python2.7/site-packages/tastypie/resources.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1712" column="8" selection-start="65945" selection-end="65945" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -60,8 +82,10 @@
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/soft338/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="29" selection-start="444" selection-end="444" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="14" column="32" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#51#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -353,17 +377,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1680" height="958" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3297619" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297619" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.09730722" sideWeight="0.6702381" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.09730722" sideWeight="0.6" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.325" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297619" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -429,21 +453,16 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="8" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="25" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/soft338/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="0" selection-start="704" selection-end="704" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -457,21 +476,27 @@
     <entry file="file://$PROJECT_DIR$/api/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="30" selection-start="87" selection-end="87" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/api_models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="27" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="e#24#78#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/soft338/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="0" selection-start="621" selection-end="621" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -509,20 +534,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/soft338/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="29" selection-start="444" selection-end="444" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/api_models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="39" selection-start="847" selection-end="847" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/soft338/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="126" column="39" selection-start="4548" selection-end="4548" vertical-scroll-proportion="0.0">
@@ -530,10 +541,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/soft338/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="32" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python2.7/site-packages/tastypie/resources.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1712" column="8" selection-start="65945" selection-end="65945" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/api_models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="0" selection-start="1961" selection-end="1961" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#24#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/api/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="547" selection-end="547" vertical-scroll-proportion="0.7570093">
-          <folding />
+        <state line="45" column="4" selection-start="949" selection-end="949" vertical-scroll-proportion="0.7413793">
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

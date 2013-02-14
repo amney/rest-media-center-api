@@ -1,9 +1,8 @@
 __author__ = 'tigarner'
-from itertools import chain
-from tastypie.resources import ModelResource
+from tastypie.resources import ModelResource, Resource
 from tastypie.authorization import Authorization
 from tastypie import fields
-from api.models import Film, Episode, Content, Series, Actor
+from api.models import Film, Episode, Series, Actor, Playlist, Content, Player
 
 
 class SeriesResource(ModelResource):
@@ -16,6 +15,7 @@ class SeriesResource(ModelResource):
 
 
 class FilmResource(ModelResource):
+
     class Meta:
         queryset = Film.objects.all()
         authorization = Authorization()
@@ -31,20 +31,48 @@ class EpisodeResource(ModelResource):
         always_return_data = True
 
 
-class ContentResource(ModelResource):
-    film = fields.ForeignKey('api.api_models.ContentResource', 'film')
-
-    class Meta:
-        f = Film.objects.all()
-        e = Episode.objects.all()
-        c = list(chain(f,e))
-        queryset = c
-        authorization = Authorization()
-        always_return_data = True
-
-
 class ActorResource(ModelResource):
     class Meta:
         queryset = Actor.objects.all()
         authorization = Authorization()
         always_return_data = True
+
+
+class ContentResource(ModelResource):
+
+    class Meta:
+        queryset = Content.objects.all()
+
+
+class PlaylistResource(ModelResource):
+    content = fields.ToManyField(ContentResource, 'content', full=True)
+
+    class Meta:
+        queryset = Playlist.objects.all()
+        authorization = Authorization()
+        always_return_data = True
+
+
+class PlayerResource(ModelResource):
+    playlist = fields.ForeignKey(PlaylistResource, 'playlist')
+
+    def get_object_list(self, request):
+        action = request.GET.get('action', '')
+
+        if action:
+            player = Player.objects.get(pk=1)
+            if action == 'play':
+                player.play()
+            elif action == 'pause':
+                player.pause()
+            elif action == 'stop':
+                player.stop()
+            elif action == 'forward':
+                pass
+            elif action == 'back':
+                pass
+
+        return ModelResource.get_object_list(self, request)
+
+    class Meta:
+        queryset = Player.objects.all()

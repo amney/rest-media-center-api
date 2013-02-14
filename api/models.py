@@ -1,3 +1,4 @@
+from collections import deque
 from django.db import models
 
 
@@ -29,4 +30,25 @@ class Playlist(models.Model):
 
 class Player(models.Model):
     playlist = models.ForeignKey(Playlist)
+    status = models.CharField(
+        null=False,
+        blank=False,
+        max_length=50,
+        choices=
+        (('playing', 'playing'),
+         ('paused', 'paused'),
+         ('stopped', 'stopped')),
+        default='stopped'
+    )
 
+    def play(self):
+        self.status = 'playing'
+        self.save()
+
+    def pause(self):
+        self.status = 'paused'
+        self.save()
+
+    def stop(self):
+        self.status = 'stopped'
+        self.save()

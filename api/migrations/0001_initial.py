@@ -65,21 +65,13 @@ class Migration(SchemaMigration):
         ))
         db.send_create_signal('api', ['Playlist'])
 
-        # Adding M2M table for field episodes on 'Playlist'
-        db.create_table('api_playlist_episodes', (
+        # Adding M2M table for field content on 'Playlist'
+        db.create_table('api_playlist_content', (
             ('id', models.AutoField(verbose_name='ID', primary_key=True, auto_created=True)),
             ('playlist', models.ForeignKey(orm['api.playlist'], null=False)),
-            ('episode', models.ForeignKey(orm['api.episode'], null=False))
+            ('content', models.ForeignKey(orm['api.content'], null=False))
         ))
-        db.create_unique('api_playlist_episodes', ['playlist_id', 'episode_id'])
-
-        # Adding M2M table for field films on 'Playlist'
-        db.create_table('api_playlist_films', (
-            ('id', models.AutoField(verbose_name='ID', primary_key=True, auto_created=True)),
-            ('playlist', models.ForeignKey(orm['api.playlist'], null=False)),
-            ('film', models.ForeignKey(orm['api.film'], null=False))
-        ))
-        db.create_unique('api_playlist_films', ['playlist_id', 'film_id'])
+        db.create_unique('api_playlist_content', ['playlist_id', 'content_id'])
 
         # Adding model 'Player'
         db.create_table('api_player', (
@@ -114,11 +106,8 @@ class Migration(SchemaMigration):
         # Deleting model 'Playlist'
         db.delete_table('api_playlist')
 
-        # Removing M2M table for field episodes on 'Playlist'
-        db.delete_table('api_playlist_episodes')
-
-        # Removing M2M table for field films on 'Playlist'
-        db.delete_table('api_playlist_films')
+        # Removing M2M table for field content on 'Playlist'
+        db.delete_table('api_playlist_content')
 
         # Deleting model 'Player'
         db.delete_table('api_player')
@@ -152,8 +141,7 @@ class Migration(SchemaMigration):
         },
         'api.playlist': {
             'Meta': {'object_name': 'Playlist'},
-            'episodes': ('django.db.models.fields.related.ManyToManyField', [], {'to': "orm['api.Episode']", 'symmetrical': 'False'}),
-            'films': ('django.db.models.fields.related.ManyToManyField', [], {'to': "orm['api.Film']", 'symmetrical': 'False'}),
+            'content': ('django.db.models.fields.related.ManyToManyField', [], {'to': "orm['api.Content']", 'symmetrical': 'False'}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'name': ('django.db.models.fields.CharField', [], {'max_length': '255'})
         },

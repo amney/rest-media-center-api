@@ -8,40 +8,15 @@ from django.db import models
 class Migration(SchemaMigration):
 
     def forwards(self, orm):
-        # Removing M2M table for field films on 'Playlist'
-        db.delete_table('api_playlist_films')
-
-        # Removing M2M table for field episodes on 'Playlist'
-        db.delete_table('api_playlist_episodes')
-
-        # Adding M2M table for field content on 'Playlist'
-        db.create_table('api_playlist_content', (
-            ('id', models.AutoField(verbose_name='ID', primary_key=True, auto_created=True)),
-            ('playlist', models.ForeignKey(orm['api.playlist'], null=False)),
-            ('content', models.ForeignKey(orm['api.content'], null=False))
-        ))
-        db.create_unique('api_playlist_content', ['playlist_id', 'content_id'])
+        # Adding field 'Player.status'
+        db.add_column('api_player', 'status',
+                      self.gf('django.db.models.fields.CharField')(default='stopped', max_length=50),
+                      keep_default=False)
 
 
     def backwards(self, orm):
-        # Adding M2M table for field films on 'Playlist'
-        db.create_table('api_playlist_films', (
-            ('id', models.AutoField(verbose_name='ID', primary_key=True, auto_created=True)),
-            ('playlist', models.ForeignKey(orm['api.playlist'], null=False)),
-            ('film', models.ForeignKey(orm['api.film'], null=False))
-        ))
-        db.create_unique('api_playlist_films', ['playlist_id', 'film_id'])
-
-        # Adding M2M table for field episodes on 'Playlist'
-        db.create_table('api_playlist_episodes', (
-            ('id', models.AutoField(verbose_name='ID', primary_key=True, auto_created=True)),
-            ('playlist', models.ForeignKey(orm['api.playlist'], null=False)),
-            ('episode', models.ForeignKey(orm['api.episode'], null=False))
-        ))
-        db.create_unique('api_playlist_episodes', ['playlist_id', 'episode_id'])
-
-        # Removing M2M table for field content on 'Playlist'
-        db.delete_table('api_playlist_content')
+        # Deleting field 'Player.status'
+        db.delete_column('api_player', 'status')
 
 
     models = {
@@ -68,7 +43,8 @@ class Migration(SchemaMigration):
         'api.player': {
             'Meta': {'object_name': 'Player'},
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'playlist': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['api.Playlist']"})
+            'playlist': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['api.Playlist']"}),
+            'status': ('django.db.models.fields.CharField', [], {'default': "'stopped'", 'max_length': '50'})
         },
         'api.playlist': {
             'Meta': {'object_name': 'Playlist'},
