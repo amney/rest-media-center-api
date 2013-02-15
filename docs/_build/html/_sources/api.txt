@@ -1,4 +1,26 @@
 API Documentation
 =================
 
-A full guide to all functions in the Media Centre API
+A full guide to all resources provided by the Media Centre API
+
+Film
+----
+
+FilmSet
+-------
+
+Episode
+-------
+
+Show
+----
+
+Content
+-------
+
+Playlist
+--------
+
+Player
+------
+

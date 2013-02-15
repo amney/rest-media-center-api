@@ -1,8 +1,8 @@
+__author__ = 'tigarner'
+
 from django.conf.urls import url
 from tastypie.utils import trailing_slash
 from tastypie.resources import ALL_WITH_RELATIONS
-
-__author__ = 'tigarner'
 from tastypie.resources import ModelResource
 from tastypie.authorization import Authorization
 from tastypie import fields
@@ -10,6 +10,9 @@ from api.models import Film, Episode, Show, Actor, Playlist, Content, Player, Fi
 
 
 class EpisodeResource(ModelResource):
+    '''
+    Resource endpoint for Episode. A episode has a resource_uri pointing to the parent show.
+    '''
     show = fields.ForeignKey('api.api_models.ShowResource', 'show')
 
     class Meta:
@@ -22,11 +25,15 @@ class EpisodeResource(ModelResource):
 
 
 class ShowResource(ModelResource):
+    '''
+    Resource endpoint for Show. A show is made up of one or more episodes. An example would be the 'The Simpsons'.
+    Appending /episodes/ to the end of a detailed resource will show all episodes belonging to that resource.
+    '''
     episodes = fields.ToManyField('api.api_models.EpisodeResource', 'episode_set', null=True)
 
     def prepend_urls(self):
         '''
-        Note to self prepend_urls needs tastypie version 0.9.12 >=
+        This is used to allow /episodes/ as a nested resource.
         '''
 
         return [
@@ -45,11 +52,16 @@ class ShowResource(ModelResource):
 
 
 class FilmSeriesResource(ModelResource):
+    '''
+    Resource endpoint for FilmSeries. Film series can be made up on two of more films that are logically grouped
+    together. An example would be the Lord of The Rings Trilogy.
+    Appending /films/ to the end of a detailed resource will show all films belonging to that resource.
+    '''
     films = fields.ToManyField('api.api_models.FilmResource', 'film_set', null=True, full=True)
 
     def prepend_urls(self):
         '''
-        Note to self prepend_urls needs tastypie version 0.9.12 >=
+        This is used to allow /films/ as a nested resource.
         '''
 
         return [
@@ -67,6 +79,10 @@ class FilmSeriesResource(ModelResource):
 
 
 class FilmResource(ModelResource):
+    '''
+    Resource endpoint for all Films. If the film belongs to a film series it will have a resource_uri pointing to that
+    series.
+    '''
     film_series = fields.ForeignKey(FilmSeriesResource, 'film_series', null=True)
 
     class Meta:
@@ -79,6 +95,9 @@ class FilmResource(ModelResource):
 
 
 class ActorResource(ModelResource):
+    '''
+    An Actor is a person that can be tied to many content objects
+    '''
     class Meta:
         queryset = Actor.objects.all()
         authorization = Authorization()
@@ -86,13 +105,19 @@ class ActorResource(ModelResource):
 
 
 class ContentResource(ModelResource):
-
+    '''
+    Content is sort of a 'meta' resource. It is used to represent everything that IS a piece of content.
+    Pragmatically this translates into a resource that lists all Film and Episode objects.
+    '''
     class Meta:
         queryset = Content.objects.all()
         authorization = Authorization()
         always_return_data = True
 
 class PlaylistResource(ModelResource):
+    '''
+    Resource endpoint for Playlist. Has an array of 'content' objects. These could either be films or episodes.
+    '''
     content = fields.ToManyField(ContentResource, 'content', null=True, full=True)
 
     class Meta:

@@ -26,7 +26,7 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="SOFT338 Media Centre API 0.1 documentation" href="#" />
-    <link rel="next" title="SOFT338 Media Centre API Tutorial" href="tutorial.html" /> 
+    <link rel="next" title="API Introduction" href="tutorial.html" /> 
   </head>
   <body>
     <div class="related">
@@ -39,7 +39,7 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="tutorial.html" title="SOFT338 Media Centre API Tutorial"
+          <a href="tutorial.html" title="API Introduction"
              accesskey="N">next</a> |</li>
         <li><a href="#">SOFT338 Media Centre API 0.1 documentation</a> &raquo;</li> 
       </ul>
@@ -52,16 +52,52 @@
             
   <div class="section" id="welcome-to-soft338-media-centre-api-s-documentation">
 <h1>Welcome to SOFT338 Media Centre API&#8217;s documentation!<a class="headerlink" href="#welcome-to-soft338-media-centre-api-s-documentation" title="Permalink to this headline">¶</a></h1>
-<p>Contents:</p>
+<img alt="_images/pc.jpg" src="_images/pc.jpg" />
+<p>The essence of the project is that a Media Centre application (e.g. XBMC, Plex, Windows Media Centre) will provide an
+API to interact with the content library.</p>
+<p>The idea is that the API will provide a set of RESTful Resources that represent the library of TV Shows, Episodes,
+Films, Film Series (e.g. Trilogies), and Playlists that map to video files on the Media Centre hard drive(s).</p>
+<p>The API is <em>not designed to upload any media files</em> but it is designed to:</p>
+<p><strong>Interact with, and manipulate the metadata associated with stored media, organize into playlists, and control the
+playback of media on the Media Center device.</strong></p>
+<div class="section" id="documentation-contents">
+<h2>Documentation Contents<a class="headerlink" href="#documentation-contents" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="tutorial.html">SOFT338 Media Centre API Tutorial</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tutorial.html#part-1-listing-all-tv-shows">Part 1: Listing all TV Shows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">API Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#get-ing-some-data-out-of-the-system">GET&#8217;ing some data out of the system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#post-ing-some-data-into-the-system">POST&#8217;ing some data into the system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#delete-ing-some-data-from-the-system">DELETE&#8217;ing some data from the system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#conclusion">Conclusion</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="code.html">Auto Generated Documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example_client.html">Example Client</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="example_client.html#setup-the-client">Setup the client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_client.html#list-all-tv-shows-drill-down-a-bit-deeper-for-a-particular-show">List all TV shows, drill down a bit deeper for a particular show</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_client.html#create-a-new-tv-show">Create a new TV show</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_client.html#create-a-few-new-episodes-for-the-show-we-made">Create a few new episodes for the show we made</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_client.html#add-the-episodes-to-a-playlist">Add the episodes to a playlist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_client.html#control-the-media-player">Control the media player</a></li>
 </ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api.html#film">Film</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#filmset">FilmSet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#episode">Episode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#show">Show</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#content">Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#playlist">Playlist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#player">Player</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="implementation.html">API Implementation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="implementation.html#foreword">Foreword</a></li>
+<li class="toctree-l2"><a class="reference internal" href="implementation.html#module-api.api_models">Module <tt class="docutils literal"><span class="pre">api.api_models</span></tt></a></li>
+<li class="toctree-l2"><a class="reference internal" href="implementation.html#module-api.models">Module <tt class="docutils literal"><span class="pre">api.models</span></tt></a></li>
+</ul>
+</li>
+</ul>
+</div>
 </div>
 </div>
 <div class="section" id="indices-and-tables">
@@ -82,6 +118,9 @@
   <h3><a href="#">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Welcome to SOFT338 Media Centre API&#8217;s documentation!</a><ul>
+<li><a class="reference internal" href="#documentation-contents">Documentation Contents</a><ul>
+</ul>
+</li>
 </ul>
 </li>
 <li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
@@ -89,7 +128,7 @@
 
   <h4>Next topic</h4>
   <p class="topless"><a href="tutorial.html"
-                        title="next chapter">SOFT338 Media Centre API Tutorial</a></p>
+                        title="next chapter">API Introduction</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/index.txt"
@@ -122,7 +161,7 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="tutorial.html" title="SOFT338 Media Centre API Tutorial"
+          <a href="tutorial.html" title="API Introduction"
              >next</a> |</li>
         <li><a href="#">SOFT338 Media Centre API 0.1 documentation</a> &raquo;</li> 
       </ul>
