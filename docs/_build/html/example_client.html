@@ -1,0 +1,217 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Example Client &mdash; SOFT338 Media Centre API 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="SOFT338 Media Centre API 0.1 documentation" href="index.html" />
+    <link rel="next" title="API Documentation" href="api.html" />
+    <link rel="prev" title="API Introduction" href="tutorial.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="api.html" title="API Documentation"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="tutorial.html" title="API Introduction"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">SOFT338 Media Centre API 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="example-client">
+<h1>Example Client<a class="headerlink" href="#example-client" title="Permalink to this headline">¶</a></h1>
+<p>For this example we will be using the Python library <a class="reference external" href="http://slumber.readthedocs.org/en/latest/">Slumber</a>, an excellent
+command line client designed for interacting with RESTful webservices.</p>
+<p>While this guide has been written for python users, it should be easily followed in most other programming languages.</p>
+<dl class="docutils">
+<dt>The path we will be following is:</dt>
+<dd><ul class="first last simple">
+<li><a class="reference internal" href="#setup-the-client">Setup the client</a></li>
+<li><a class="reference internal" href="#list-all-tv-shows-drill-down-a-bit-deeper-for-a-particular-show">List all TV shows, drill down a bit deeper for a particular show</a></li>
+<li><a class="reference internal" href="#create-a-new-tv-show">Create a new TV show</a></li>
+<li><a class="reference internal" href="#create-a-few-new-episodes-for-the-show-we-made">Create a few new episodes for the show we made</a></li>
+<li><a class="reference internal" href="#add-the-episodes-to-a-playlist">Add the episodes to a playlist</a></li>
+<li><a class="reference internal" href="#control-the-media-player">Control the media player</a></li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="setup-the-client">
+<h2>Setup the client<a class="headerlink" href="#setup-the-client" title="Permalink to this headline">¶</a></h2>
+<p>To setup the client you will need to install Slumber, then create an API object:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">slumber</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">api</span> <span class="o">=</span> <span class="n">slumber</span><span class="o">.</span><span class="n">API</span><span class="p">(</span><span class="s">&quot;http://localhost:8000/api/v1/&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="list-all-tv-shows-drill-down-a-bit-deeper-for-a-particular-show">
+<h2>List all TV shows, drill down a bit deeper for a particular show<a class="headerlink" href="#list-all-tv-shows-drill-down-a-bit-deeper-for-a-particular-show" title="Permalink to this headline">¶</a></h2>
+<p>To list all TV shows we will call this line of code:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">shows</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">show</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">show</span>
+<span class="go">{u&#39;meta&#39;: {u&#39;previous&#39;: None, u&#39;total_count&#39;: 0, u&#39;offset&#39;: 0, u&#39;limit&#39;: 20, u&#39;next&#39;: None}, u&#39;objects&#39;: []}</span>
+</pre></div>
+</div>
+<p>Now let&#8217;s grab a detail version of the first show object:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">show</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">THIS</span> <span class="n">IS</span> <span class="n">THE</span> <span class="n">SHOW</span>
+</pre></div>
+</div>
+<p>How about seeing all episodes this show has:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">episodes</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">episodes</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">episodes</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">THIS</span> <span class="n">IS</span> <span class="n">THE</span> <span class="n">EPISODES</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-a-new-tv-show">
+<h2>Create a new TV show<a class="headerlink" href="#create-a-new-tv-show" title="Permalink to this headline">¶</a></h2>
+<p>Now let&#8217;s POST a new show object - it&#8217;s easy!</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">new_show</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">show</span><span class="o">.</span><span class="n">post</span><span class="p">({</span> <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;The Office UK&quot;</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">NEW</span> <span class="n">SHOW</span> <span class="n">ECHOED</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-a-few-new-episodes-for-the-show-we-made">
+<h2>Create a few new episodes for the show we made<a class="headerlink" href="#create-a-few-new-episodes-for-the-show-we-made" title="Permalink to this headline">¶</a></h2>
+<p>All we need to do is POST a few new episodes, specifying the show as the one we just created</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">ep1</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">episode</span><span class="o">.</span><span class="n">post</span><span class="p">({</span> <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;Episode 01&quot;</span><span class="p">,</span> <span class="s">&quot;show&quot;</span><span class="p">:</span> <span class="n">new_show</span> <span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ep2</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">episode</span><span class="o">.</span><span class="n">post</span><span class="p">({</span> <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;Episode 02&quot;</span><span class="p">,</span> <span class="s">&quot;show&quot;</span><span class="p">:</span> <span class="n">new_show</span> <span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ep3</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">episode</span><span class="o">.</span><span class="n">post</span><span class="p">({</span> <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;Episode 03&quot;</span><span class="p">,</span> <span class="s">&quot;show&quot;</span><span class="p">:</span> <span class="n">new_show</span> <span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="add-the-episodes-to-a-playlist">
+<h2>Add the episodes to a playlist<a class="headerlink" href="#add-the-episodes-to-a-playlist" title="Permalink to this headline">¶</a></h2>
+<p>Now let&#8217;s add these new episodes to a new playlist:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">playlist</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">playlist</span><span class="o">.</span><span class="n">post</span><span class="p">({</span> <span class="s">&quot;name&quot;</span><span class="p">,</span> <span class="s">&quot;My favourite office episodes&quot;</span> <span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">playlist</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">playlist</span><span class="o">.</span><span class="n">patch</span><span class="p">({</span> <span class="s">&quot;content&quot;</span><span class="p">,</span>  <span class="p">[</span>
+<span class="go">                                                { &quot;resource_uri&quot;: ep1 },</span>
+<span class="go">                                                { &quot;resource_uri&quot;: ep2 },</span>
+<span class="go">                                                { &quot;resource_uri&quot;: ep3 },</span>
+<span class="go">                                                ]}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="control-the-media-player">
+<h2>Control the media player<a class="headerlink" href="#control-the-media-player" title="Permalink to this headline">¶</a></h2>
+<p>As there is only one &#8216;player&#8217;, it is represented by one resource at /api/v1/player/. To command you need to pass
+arguments via the ?action parameter</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">player</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">player</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s">&#39;play&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">player</span><span class="p">[</span><span class="s">&#39;status&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">&#39;playing&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">player</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">player</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s">&#39;pause&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">player</span><span class="p">[</span><span class="s">&#39;status&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s">&#39;paused&#39;</span>
+</pre></div>
+</div>
+<p>Available actions are: play, pause, stop, next, back.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Example Client</a><ul>
+<li><a class="reference internal" href="#setup-the-client">Setup the client</a></li>
+<li><a class="reference internal" href="#list-all-tv-shows-drill-down-a-bit-deeper-for-a-particular-show">List all TV shows, drill down a bit deeper for a particular show</a></li>
+<li><a class="reference internal" href="#create-a-new-tv-show">Create a new TV show</a></li>
+<li><a class="reference internal" href="#create-a-few-new-episodes-for-the-show-we-made">Create a few new episodes for the show we made</a></li>
+<li><a class="reference internal" href="#add-the-episodes-to-a-playlist">Add the episodes to a playlist</a></li>
+<li><a class="reference internal" href="#control-the-media-player">Control the media player</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="tutorial.html"
+                        title="previous chapter">API Introduction</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="api.html"
+                        title="next chapter">API Documentation</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/example_client.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="api.html" title="API Documentation"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="tutorial.html" title="API Introduction"
+             >previous</a> |</li>
+        <li><a href="index.html">SOFT338 Media Centre API 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Tim Garner.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
