@@ -1,4 +1,3 @@
-from collections import deque
 from django.db import models
 
 
@@ -6,7 +5,11 @@ class Actor(models.Model):
     name = models.CharField(max_length=255)
 
 
-class Series(models.Model):
+class FilmSeries(models.Model):
+    name = models.CharField(max_length=255)
+
+
+class Show(models.Model):
     name = models.CharField(max_length=255)
     actors = models.ManyToManyField(Actor)
 
@@ -16,11 +19,12 @@ class Content(models.Model):
 
 
 class Episode(Content):
-    series = models.ForeignKey(Series)
+    show = models.ForeignKey(Show)
 
 
 class Film(Content):
     actors = models.ManyToManyField(Actor)
+    film_series = models.ForeignKey(FilmSeries, null=True, blank=True)
 
 
 class Playlist(models.Model):

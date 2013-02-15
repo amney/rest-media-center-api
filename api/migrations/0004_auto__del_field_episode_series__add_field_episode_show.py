@@ -6,15 +6,23 @@ from south.v2 import SchemaMigration
 class Migration(SchemaMigration):
 
     def forwards(self, orm):
-        # Adding field 'Player.status'
-        db.add_column('api_player', 'status',
-                      self.gf('django.db.models.fields.CharField')(default='stopped', max_length=50),
+        # Deleting field 'Episode.series'
+        db.delete_column('api_episode', 'series_id')
+
+        # Adding field 'Episode.show'
+        db.add_column('api_episode', 'show',
+                      self.gf('django.db.models.fields.related.ForeignKey')(default=1, to=orm['api.Show']),
                       keep_default=False)
 
 
     def backwards(self, orm):
-        # Deleting field 'Player.status'
-        db.delete_column('api_player', 'status')
+        # Adding field 'Episode.series'
+        db.add_column('api_episode', 'series',
+                      self.gf('django.db.models.fields.related.ForeignKey')(default=1, to=orm['api.Show']),
+                      keep_default=False)
+
+        # Deleting field 'Episode.show'
+        db.delete_column('api_episode', 'show_id')
 
 
     models = {
@@ -31,12 +39,18 @@ class Migration(SchemaMigration):
         'api.episode': {
             'Meta': {'object_name': 'Episode', '_ormbases': ['api.Content']},
             'content_ptr': ('django.db.models.fields.related.OneToOneField', [], {'to': "orm['api.Content']", 'unique': 'True', 'primary_key': 'True'}),
-            'series': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['api.Series']"})
+            'show': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['api.Show']"})
         },
         'api.film': {
             'Meta': {'object_name': 'Film', '_ormbases': ['api.Content']},
             'actors': ('django.db.models.fields.related.ManyToManyField', [], {'to': "orm['api.Actor']", 'symmetrical': 'False'}),
-            'content_ptr': ('django.db.models.fields.related.OneToOneField', [], {'to': "orm['api.Content']", 'unique': 'True', 'primary_key': 'True'})
+            'content_ptr': ('django.db.models.fields.related.OneToOneField', [], {'to': "orm['api.Content']", 'unique': 'True', 'primary_key': 'True'}),
+            'film_set': ('django.db.models.fields.related.ForeignKey', [], {'to': "orm['api.FilmSet']"})
+        },
+        'api.filmset': {
+            'Meta': {'object_name': 'FilmSet'},
+            'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
+            'name': ('django.db.models.fields.CharField', [], {'max_length': '255'})
         },
         'api.player': {
             'Meta': {'object_name': 'Player'},
@@ -50,8 +64,8 @@ class Migration(SchemaMigration):
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'name': ('django.db.models.fields.CharField', [], {'max_length': '255'})
         },
-        'api.series': {
-            'Meta': {'object_name': 'Series'},
+        'api.show': {
+            'Meta': {'object_name': 'Show'},
             'actors': ('django.db.models.fields.related.ManyToManyField', [], {'to': "orm['api.Actor']", 'symmetrical': 'False'}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'name': ('django.db.models.fields.CharField', [], {'max_length': '255'})
