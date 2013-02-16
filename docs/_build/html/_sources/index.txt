@@ -6,7 +6,7 @@
 Welcome to SOFT338 Media Centre API's documentation!
 ====================================================
 
-.. image:: pc.jpg
+.. image:: _static/pc.jpg
 
 The essence of the project is that a Media Centre application (e.g. XBMC, Plex, Windows Media Centre) will provide an
 API to interact with the content library.

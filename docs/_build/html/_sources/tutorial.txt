@@ -10,7 +10,7 @@ We will go through:
     - Editing some data about a film
     - Deleting a film
 
-For a detailed look at the structure of the api please see the :doc:`api` document.
+For a detailed look at the structure of the API please see the :doc:`api`.
 
 GET'ing some data out of the system
 -----------------------------------

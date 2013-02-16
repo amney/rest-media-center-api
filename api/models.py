@@ -28,6 +28,11 @@ class Content(models.Model):
     Object representing a piece of Content in the Database.
     '''
     name = models.CharField(max_length=255)
+    length = models.CharField(max_length=50)
+    file_type = models.CharField(max_length=50, choices=(('mkv', 'mkv'), ('mp4', 'mp4'), ('avi', 'avi')))
+    quality = models.CharField(max_length=50, choices=(('HDTV', 'HDTV'), ('TV', 'TV'), ('Blu-Ray', 'Blu-Ray')))
+    frame_rate = models.PositiveIntegerField()
+
 
 
 class Episode(Content):
