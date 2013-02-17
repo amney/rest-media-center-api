@@ -77,7 +77,9 @@
 acquired by appending the id to the list resource.</p>
 <p>Some detail resources will even provide nested lists, if appropriate.</p>
 <p>To GET a list of Films:</p>
-<div class="highlight-python"><pre>GET /api/v1/film/</pre>
+<div class="highlight-python"><pre>GET /api/v1/film/
+
+Returns HTTP 200 OK on Success</pre>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -100,9 +102,18 @@ You can retrieve this by:</p>
 <p>To create a new film:</p>
 <div class="highlight-js"><div class="highlight"><pre><span class="nx">POST</span> <span class="o">/</span><span class="nx">api</span><span class="o">/</span><span class="nx">v1</span><span class="o">/</span><span class="nx">film</span><span class="o">/</span>
 
-<span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;Lord of the Rings&quot;</span>
-      <span class="p">}</span>
+<span class="nx">data</span><span class="o">:</span>
+<span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;Lord of The Rings&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;file_type&quot;</span><span class="o">:</span> <span class="s2">&quot;mkv&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;frame_rate&quot;</span><span class="o">:</span> <span class="s2">&quot;24&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;length&quot;</span><span class="o">:</span> <span class="s2">&quot;1:45:00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;plot&quot;</span><span class="o">:</span> <span class="s2">&quot;An Epic Adventure&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;quality&quot;</span><span class="o">:</span> <span class="s2">&quot;Blu-Ray&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;release_date&quot;</span><span class="o">:</span> <span class="s2">&quot;2001-10-12&quot;</span>
+<span class="p">}</span>
+
+<span class="nx">Returns</span> <span class="nx">HTTP</span> <span class="mi">201</span> <span class="nx">Created</span> <span class="nx">on</span> <span class="nx">Success</span>
 </pre></div>
 </div>
 <p>To edit a film:</p>
@@ -111,13 +122,17 @@ You can retrieve this by:</p>
 <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;Lord of the Rings: The Fellowship of the Ring&quot;</span>
       <span class="p">}</span>
+
+<span class="nx">Returns</span> <span class="nx">HTTP</span> <span class="mi">202</span> <span class="nx">Accepted</span> <span class="nx">on</span> <span class="nx">Success</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="delete-ing-some-data-from-the-system">
 <h2>DELETE&#8217;ing some data from the system<a class="headerlink" href="#delete-ing-some-data-from-the-system" title="Permalink to this headline">¶</a></h2>
 <p>The DELETE HTTP verb is used:</p>
-<div class="highlight-python"><pre>DELETE /api/v1/film/{id}/</pre>
+<div class="highlight-python"><pre>DELETE /api/v1/film/{id}/
+
+Returns HTTP 204 No Content on Success</pre>
 </div>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>

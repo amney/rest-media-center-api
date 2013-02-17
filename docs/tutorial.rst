@@ -27,6 +27,8 @@ To GET a list of Films::
 
     GET /api/v1/film/
 
+    Returns HTTP 200 OK on Success
+
 .. note::
 
    You can search for films by name by appending the ?name parameter and providing a search string
@@ -53,9 +55,18 @@ To create a new film:
 
     POST /api/v1/film/
 
-    data: {
-            "name": "Lord of the Rings"
-          }
+    data:
+    {
+        "name": "Lord of The Rings",
+        "file_type": "mkv",
+        "frame_rate": "24",
+        "length": "1:45:00",
+        "plot": "An Epic Adventure",
+        "quality": "Blu-Ray",
+        "release_date": "2001-10-12"
+    }
+
+    Returns HTTP 201 Created on Success
 
 To edit a film:
 
@@ -67,6 +78,7 @@ To edit a film:
             "name": "Lord of the Rings: The Fellowship of the Ring"
           }
 
+    Returns HTTP 202 Accepted on Success
 
 DELETE'ing some data from the system
 ------------------------------------
@@ -75,6 +87,8 @@ The DELETE HTTP verb is used::
 
     DELETE /api/v1/film/{id}/
 
+    Returns HTTP 204 No Content on Success
+    
 .. warning::
 
    You can perform a DELETE against a list, be careful: this will delete *all* objects of that Resource type.
