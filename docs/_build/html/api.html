@@ -56,27 +56,583 @@
             
   <div class="section" id="api-documentation">
 <h1>API Documentation<a class="headerlink" href="#api-documentation" title="Permalink to this headline">¶</a></h1>
-<p>A full guide to all resources provided by the Media Centre API</p>
+<p>A full guide to all resources provided by the Media Centre API.</p>
+<p>The API is also self-documenting, <tt class="docutils literal"><span class="pre">GET</span> <span class="pre">/api/v1/</span></tt> is a great starting point.</p>
+<p>Appending <tt class="docutils literal"><span class="pre">/schema/</span></tt> to any Resource will get a description of that Resource.</p>
+<p>The API root is at <tt class="docutils literal"><span class="pre">http://api.tim-garner.co.uk/</span></tt></p>
 <div class="section" id="film">
 <h2>Film<a class="headerlink" href="#film" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="method-get-api-v1-film-name">
+<tt class="descclassname deschttpmethod">GET </tt><tt class="descname deschttpurl"><span class="deschttppath">/api/v1/film/</span><span class="deschttpquery">?<em class="deschttpqueryparam">name</em></span></tt><a class="headerlink" href="#method-get-api-v1-film-name" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Opt. params:</th><td class="field-body"><strong>name</strong> &#8211; Search for Film containing name</td>
+</tr>
+</tbody>
+</table>
+<p>Retrieve list of Films</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-get-api-v1-film-id-">
+<tt class="descclassname deschttpmethod">GET </tt><tt class="descname deschttpurl"><span class="deschttppath">/api/v1/film/<em class="deschttppatharg">{<span class="deschttppatharg deschttppatharg">id</span>}</em>/</span></tt><a class="headerlink" href="#method-get-api-v1-film-id-" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Path arguments:</th><td class="field-body"><strong>id</strong> &#8211; An id</td>
+</tr>
+</tbody>
+</table>
+<p>Retrieve Film matching given id.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-post-api-v1-film-">
+<tt class="descclassname deschttpmethod">POST </tt><tt class="descname deschttpurl"><span class="deschttppath">/api/v1/film/</span></tt><a class="headerlink" href="#method-post-api-v1-film-" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Responses:</th><td class="field-body"><strong>202</strong> &#8211; A Film was created successfully.</td>
+</tr>
+</tbody>
+</table>
+<p>Create a Film</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-post-api-v1-film-id-">
+<tt class="descclassname deschttpmethod">POST </tt><tt class="descname deschttpurl"><span class="deschttppath">/api/v1/film/<em class="deschttppatharg">{<span class="deschttppatharg deschttppatharg">id</span>}</em>/</span></tt><a class="headerlink" href="#method-post-api-v1-film-id-" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Path arguments:</th><td class="field-body"><strong>id</strong> &#8211; An id</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Responses:</th><td class="field-body"><strong>202</strong> &#8211; The Film was updated successfully.</td>
+</tr>
+</tbody>
+</table>
+<p>Update Film matching given id</p>
+</dd></dl>
+
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">PATCH and PUT are both available and work in a similar fashion to POST</p>
 </div>
-<div class="section" id="filmset">
-<h2>FilmSet<a class="headerlink" href="#filmset" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="method-delete-api-v1-film-">
+<tt class="descclassname deschttpmethod">DELETE </tt><tt class="descname deschttpurl"><span class="deschttppath">/api/v1/film/</span></tt><a class="headerlink" href="#method-delete-api-v1-film-" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Responses:</th><td class="field-body"><strong>202</strong> &#8211; The Films were deleted successfully.</td>
+</tr>
+</tbody>
+</table>
+<p>Delete <em>all</em> Films</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-delete-api-v1-film-id-">
+<tt class="descclassname deschttpmethod">DELETE </tt><tt class="descname deschttpurl"><span class="deschttppath">/api/v1/film/<em class="deschttppatharg">{<span class="deschttppatharg deschttppatharg">id</span>}</em>/</span></tt><a class="headerlink" href="#method-delete-api-v1-film-id-" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Path arguments:</th><td class="field-body"><strong>id</strong> &#8211; An id</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Responses:</th><td class="field-body"><strong>202</strong> &#8211; The Film was deleted successfully.</td>
+</tr>
+</tbody>
+</table>
+<p>Delete film</p>
+</dd></dl>
+
+</div>
+<div class="section" id="filmseries">
+<h2>FilmSeries<a class="headerlink" href="#filmseries" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="method-get-api-v1-filmseries-name">
+<tt class="descclassname deschttpmethod">GET </tt><tt class="descname deschttpurl"><span class="deschttppath">/api/v1/filmseries/</span><span class="deschttpquery">?<em class="deschttpqueryparam">name</em></span></tt><a class="headerlink" href="#method-get-api-v1-filmseries-name" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Opt. params:</th><td class="field-body"><strong>name</strong> &#8211; <p>Search for Filmseries containing name</p>
+<p>Retrieve list of Filmseriess</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-get-api-v1-filmseries-id-">
+<tt class="descclassname deschttpmethod">GET </tt><tt class="descname deschttpurl"><span class="deschttppath">/api/v1/filmseries/<em class="deschttppatharg">{<span class="deschttppatharg deschttppatharg">id</span>}</em>/</span></tt><a class="headerlink" href="#method-get-api-v1-filmseries-id-" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Path arguments:</th><td class="field-body"><strong>id</strong> &#8211; <p>An id</p>
+<p>Retrieve Filmseries matching given id.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-post-api-v1-filmseries-">
+<tt class="descclassname deschttpmethod">POST </tt><tt class="descname deschttpurl"><span class="deschttppath">/api/v1/filmseries/</span></tt><a class="headerlink" href="#method-post-api-v1-filmseries-" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Responses:</th><td class="field-body"><strong>202</strong> &#8211; <p>A Filmseries was created successfully.</p>
+<p>Create a Filmseries</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-post-api-v1-filmseries-id-">
+<tt class="descclassname deschttpmethod">POST </tt><tt class="descname deschttpurl"><span class="deschttppath">/api/v1/filmseries/<em class="deschttppatharg">{<span class="deschttppatharg deschttppatharg">id</span>}</em>/</span></tt><a class="headerlink" href="#method-post-api-v1-filmseries-id-" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Path arguments:</th><td class="field-body"><strong>id</strong> &#8211; <p>An id</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">response 202:</th><td class="field-body">The Filmseries was updated successfully.</td>
+</tr>
+</tbody>
+</table>
+<p>Update Filmseries matching given id</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">PATCH and PUT are both available and work in a similar fashion to POST</p>
+</div>
+<dl class="method">
+<dt id="method-delete-api-v1-filmseries-">
+<tt class="descclassname deschttpmethod">DELETE </tt><tt class="descname deschttpurl"><span class="deschttppath">/api/v1/filmseries/</span></tt><a class="headerlink" href="#method-delete-api-v1-filmseries-" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Responses:</th><td class="field-body"><strong>202</strong> &#8211; The Filmseriess were deleted successfully.</td>
+</tr>
+</tbody>
+</table>
+<p>Delete <em>all</em> Filmseriess</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-delete-api-v1-filmseries-id-">
+<tt class="descclassname deschttpmethod">DELETE </tt><tt class="descname deschttpurl"><span class="deschttppath">/api/v1/filmseries/<em class="deschttppatharg">{<span class="deschttppatharg deschttppatharg">id</span>}</em>/</span></tt><a class="headerlink" href="#method-delete-api-v1-filmseries-id-" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Path arguments:</th><td class="field-body"><strong>id</strong> &#8211; An id</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Responses:</th><td class="field-body"><strong>202</strong> &#8211; The Filmseries was deleted successfully.</td>
+</tr>
+</tbody>
+</table>
+<p>Delete filmseries</p>
+</dd></dl>
+
 </div>
 <div class="section" id="episode">
 <h2>Episode<a class="headerlink" href="#episode" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="method-get-api-v1-episode-name">
+<tt class="descclassname deschttpmethod">GET </tt><tt class="descname deschttpurl"><span class="deschttppath">/api/v1/episode/</span><span class="deschttpquery">?<em class="deschttpqueryparam">name</em></span></tt><a class="headerlink" href="#method-get-api-v1-episode-name" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Opt. params:</th><td class="field-body"><strong>name</strong> &#8211; <p>Search for Episode containing name</p>
+<p>Retrieve list of Episodes</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-get-api-v1-episode-id-">
+<tt class="descclassname deschttpmethod">GET </tt><tt class="descname deschttpurl"><span class="deschttppath">/api/v1/episode/<em class="deschttppatharg">{<span class="deschttppatharg deschttppatharg">id</span>}</em>/</span></tt><a class="headerlink" href="#method-get-api-v1-episode-id-" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Path arguments:</th><td class="field-body"><strong>id</strong> &#8211; <p>An id</p>
+<p>Retrieve Episode matching given id.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-post-api-v1-episode-">
+<tt class="descclassname deschttpmethod">POST </tt><tt class="descname deschttpurl"><span class="deschttppath">/api/v1/episode/</span></tt><a class="headerlink" href="#method-post-api-v1-episode-" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Responses:</th><td class="field-body"><strong>202</strong> &#8211; <p>A Episode was created successfully.</p>
+<p>Create a Episode</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-post-api-v1-episode-id-">
+<tt class="descclassname deschttpmethod">POST </tt><tt class="descname deschttpurl"><span class="deschttppath">/api/v1/episode/<em class="deschttppatharg">{<span class="deschttppatharg deschttppatharg">id</span>}</em>/</span></tt><a class="headerlink" href="#method-post-api-v1-episode-id-" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Path arguments:</th><td class="field-body"><strong>id</strong> &#8211; <p>An id</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">response 202:</th><td class="field-body">The Episode was updated successfully.</td>
+</tr>
+</tbody>
+</table>
+<p>Update Episode matching given id</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">PATCH and PUT are both available and work in a similar fashion to POST</p>
+</div>
+<dl class="method">
+<dt id="method-delete-api-v1-episode-">
+<tt class="descclassname deschttpmethod">DELETE </tt><tt class="descname deschttpurl"><span class="deschttppath">/api/v1/episode/</span></tt><a class="headerlink" href="#method-delete-api-v1-episode-" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Responses:</th><td class="field-body"><strong>202</strong> &#8211; The Episodes were deleted successfully.</td>
+</tr>
+</tbody>
+</table>
+<p>Delete <em>all</em> Episodes</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-delete-api-v1-episode-id-">
+<tt class="descclassname deschttpmethod">DELETE </tt><tt class="descname deschttpurl"><span class="deschttppath">/api/v1/episode/<em class="deschttppatharg">{<span class="deschttppatharg deschttppatharg">id</span>}</em>/</span></tt><a class="headerlink" href="#method-delete-api-v1-episode-id-" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Path arguments:</th><td class="field-body"><strong>id</strong> &#8211; An id</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Responses:</th><td class="field-body"><strong>202</strong> &#8211; The Episode was deleted successfully.</td>
+</tr>
+</tbody>
+</table>
+<p>Delete episode</p>
+</dd></dl>
+
 </div>
 <div class="section" id="show">
 <h2>Show<a class="headerlink" href="#show" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="method-get-api-v1-show-name">
+<tt class="descclassname deschttpmethod">GET </tt><tt class="descname deschttpurl"><span class="deschttppath">/api/v1/show/</span><span class="deschttpquery">?<em class="deschttpqueryparam">name</em></span></tt><a class="headerlink" href="#method-get-api-v1-show-name" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Opt. params:</th><td class="field-body"><strong>name</strong> &#8211; <p>Search for Show containing name</p>
+<p>Retrieve list of Shows</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-get-api-v1-show-id-">
+<tt class="descclassname deschttpmethod">GET </tt><tt class="descname deschttpurl"><span class="deschttppath">/api/v1/show/<em class="deschttppatharg">{<span class="deschttppatharg deschttppatharg">id</span>}</em>/</span></tt><a class="headerlink" href="#method-get-api-v1-show-id-" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Path arguments:</th><td class="field-body"><strong>id</strong> &#8211; <p>An id</p>
+<p>Retrieve Show matching given id.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-post-api-v1-show-">
+<tt class="descclassname deschttpmethod">POST </tt><tt class="descname deschttpurl"><span class="deschttppath">/api/v1/show/</span></tt><a class="headerlink" href="#method-post-api-v1-show-" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Responses:</th><td class="field-body"><strong>202</strong> &#8211; <p>A Show was created successfully.</p>
+<p>Create a Show</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-post-api-v1-show-id-">
+<tt class="descclassname deschttpmethod">POST </tt><tt class="descname deschttpurl"><span class="deschttppath">/api/v1/show/<em class="deschttppatharg">{<span class="deschttppatharg deschttppatharg">id</span>}</em>/</span></tt><a class="headerlink" href="#method-post-api-v1-show-id-" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Path arguments:</th><td class="field-body"><strong>id</strong> &#8211; <p>An id</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">response 202:</th><td class="field-body">The Show was updated successfully.</td>
+</tr>
+</tbody>
+</table>
+<p>Update Show matching given id</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">PATCH and PUT are both available and work in a similar fashion to POST</p>
+</div>
+<dl class="method">
+<dt id="method-delete-api-v1-show-">
+<tt class="descclassname deschttpmethod">DELETE </tt><tt class="descname deschttpurl"><span class="deschttppath">/api/v1/show/</span></tt><a class="headerlink" href="#method-delete-api-v1-show-" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Responses:</th><td class="field-body"><strong>202</strong> &#8211; The Shows were deleted successfully.</td>
+</tr>
+</tbody>
+</table>
+<p>Delete <em>all</em> Shows</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-delete-api-v1-show-id-">
+<tt class="descclassname deschttpmethod">DELETE </tt><tt class="descname deschttpurl"><span class="deschttppath">/api/v1/show/<em class="deschttppatharg">{<span class="deschttppatharg deschttppatharg">id</span>}</em>/</span></tt><a class="headerlink" href="#method-delete-api-v1-show-id-" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Path arguments:</th><td class="field-body"><strong>id</strong> &#8211; An id</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Responses:</th><td class="field-body"><strong>202</strong> &#8211; The Show was deleted successfully.</td>
+</tr>
+</tbody>
+</table>
+<p>Delete show</p>
+</dd></dl>
+
 </div>
 <div class="section" id="content">
 <h2>Content<a class="headerlink" href="#content" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Content is the parent of Film and Episode Resources. You cannot directly create, update or delete a Content Resource.</p>
+</div>
+<dl class="method">
+<dt id="method-get-api-v1-content-name">
+<tt class="descclassname deschttpmethod">GET </tt><tt class="descname deschttpurl"><span class="deschttppath">/api/v1/content/</span><span class="deschttpquery">?<em class="deschttpqueryparam">name</em></span></tt><a class="headerlink" href="#method-get-api-v1-content-name" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Opt. params:</th><td class="field-body"><strong>name</strong> &#8211; <p>Search for Content containing name</p>
+<p>Retrieve list of Contents</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-get-api-v1-content-id-">
+<tt class="descclassname deschttpmethod">GET </tt><tt class="descname deschttpurl"><span class="deschttppath">/api/v1/content/<em class="deschttppatharg">{<span class="deschttppatharg deschttppatharg">id</span>}</em>/</span></tt><a class="headerlink" href="#method-get-api-v1-content-id-" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Path arguments:</th><td class="field-body"><strong>id</strong> &#8211; <p>An id</p>
+<p>Retrieve Content matching given id.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </div>
 <div class="section" id="playlist">
 <h2>Playlist<a class="headerlink" href="#playlist" title="Permalink to this headline">¶</a></h2>
+<dl class="method">
+<dt id="method-get-api-v1-playlist-name">
+<tt class="descclassname deschttpmethod">GET </tt><tt class="descname deschttpurl"><span class="deschttppath">/api/v1/playlist/</span><span class="deschttpquery">?<em class="deschttpqueryparam">name</em></span></tt><a class="headerlink" href="#method-get-api-v1-playlist-name" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Opt. params:</th><td class="field-body"><strong>name</strong> &#8211; <p>Search for Playlist containing name</p>
+<p>Retrieve list of Playlists</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-get-api-v1-playlist-id-">
+<tt class="descclassname deschttpmethod">GET </tt><tt class="descname deschttpurl"><span class="deschttppath">/api/v1/playlist/<em class="deschttppatharg">{<span class="deschttppatharg deschttppatharg">id</span>}</em>/</span></tt><a class="headerlink" href="#method-get-api-v1-playlist-id-" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Path arguments:</th><td class="field-body"><strong>id</strong> &#8211; <p>An id</p>
+<p>Retrieve Playlist matching given id.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-post-api-v1-playlist-">
+<tt class="descclassname deschttpmethod">POST </tt><tt class="descname deschttpurl"><span class="deschttppath">/api/v1/playlist/</span></tt><a class="headerlink" href="#method-post-api-v1-playlist-" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Responses:</th><td class="field-body"><strong>202</strong> &#8211; <p>A Playlist was created successfully.</p>
+<p>Create a Playlist</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-post-api-v1-playlist-id-">
+<tt class="descclassname deschttpmethod">POST </tt><tt class="descname deschttpurl"><span class="deschttppath">/api/v1/playlist/<em class="deschttppatharg">{<span class="deschttppatharg deschttppatharg">id</span>}</em>/</span></tt><a class="headerlink" href="#method-post-api-v1-playlist-id-" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Path arguments:</th><td class="field-body"><strong>id</strong> &#8211; <p>An id</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">response 202:</th><td class="field-body">The Playlist was updated successfully.</td>
+</tr>
+</tbody>
+</table>
+<p>Update Playlist matching given id</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">PATCH and PUT are both available and work in a similar fashion to POST</p>
+</div>
+<dl class="method">
+<dt id="method-delete-api-v1-playlist-">
+<tt class="descclassname deschttpmethod">DELETE </tt><tt class="descname deschttpurl"><span class="deschttppath">/api/v1/playlist/</span></tt><a class="headerlink" href="#method-delete-api-v1-playlist-" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Responses:</th><td class="field-body"><strong>202</strong> &#8211; The Playlists were deleted successfully.</td>
+</tr>
+</tbody>
+</table>
+<p>Delete <em>all</em> Playlists</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="method-delete-api-v1-playlist-id-">
+<tt class="descclassname deschttpmethod">DELETE </tt><tt class="descname deschttpurl"><span class="deschttppath">/api/v1/playlist/<em class="deschttppatharg">{<span class="deschttppatharg deschttppatharg">id</span>}</em>/</span></tt><a class="headerlink" href="#method-delete-api-v1-playlist-id-" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Path arguments:</th><td class="field-body"><strong>id</strong> &#8211; An id</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Responses:</th><td class="field-body"><strong>202</strong> &#8211; The Playlist was deleted successfully.</td>
+</tr>
+</tbody>
+</table>
+<p>Delete playlist</p>
+</dd></dl>
+
 </div>
 <div class="section" id="player">
 <h2>Player<a class="headerlink" href="#player" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There is only <em>one</em> Player, you cannot create, update or delete it.</p>
+</div>
+<dl class="method">
+<dt id="method-get-api-v1-player-action">
+<tt class="descclassname deschttpmethod">GET </tt><tt class="descname deschttpurl"><span class="deschttppath">/api/v1/player/</span><span class="deschttpquery">?<em class="deschttpqueryparam">action</em></span></tt><a class="headerlink" href="#method-get-api-v1-player-action" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Opt. params:</th><td class="field-body"><strong>action</strong> &#8211; Command player to perform action.
+Actions available: play, pause, stop, back, next.</td>
+</tr>
+</tbody>
+</table>
+<p>Retrieve Player</p>
+</dd></dl>
+
 </div>
 </div>
 
@@ -86,11 +642,14 @@
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/gears.png" alt="Logo"/>
+            </a></p>
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">API Documentation</a><ul>
 <li><a class="reference internal" href="#film">Film</a></li>
-<li><a class="reference internal" href="#filmset">FilmSet</a></li>
+<li><a class="reference internal" href="#filmseries">FilmSeries</a></li>
 <li><a class="reference internal" href="#episode">Episode</a></li>
 <li><a class="reference internal" href="#show">Show</a></li>
 <li><a class="reference internal" href="#content">Content</a></li>

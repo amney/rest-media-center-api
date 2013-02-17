@@ -6,6 +6,7 @@ The purpose of this guide is to help you get started interacting with the API.
 We will go through:
     - Retrieving a list of all films
     - Getting some more detail about a single film
+    - Getting a related resource
     - Creating a new film
     - Editing some data about a film
     - Deleting a film
@@ -22,36 +23,61 @@ acquired by appending the id to the list resource.
 
 Some detail resources will even provide nested lists, if appropriate.
 
-To GET a list of Films post::
+To GET a list of Films::
 
-    GET http://tim-garner.co.uk/api/v1/film/
+    GET /api/v1/film/
+
+.. note::
+
+   You can search for film names by appending the ?name parameter and providing a search string
 
 To GET a detailed view of one film::
 
-    GET http://tim-garner.co.uk/api/v1/film/1/
+    GET /api/v1/film/{id}/
+
+Resources can point to related objects. A film will have a Film Series resource_uri if it belongs to one.
+You can retrieve this by::
+
+    GET /api/v1/filmseries/{id}/
+
+.. note::
+
+    Append /films/ to the end of a Film Series detail and it will list all Films in that Series.
 
 POST'ing some data into the system
 ----------------------------------
 
-To create a new film::
+To create a new film:
 
-    POST http://tim-garner.co.uk/api/v1/film/
+..  code-block:: js
 
-    data: { "name": "Die Hard" }
+    POST /api/v1/film/
 
-To edit a film::
+    data: {
+            "name": "Lord of the Rings"
+          }
 
-    PATCH http://tim-garner.co.uk/api/v1/film/1
+To edit a film:
 
-    data: { "name": "Die Hard 2" }
+..  code-block:: js
+
+    PATCH /api/v1/film/{id}/
+
+    data: {
+            "name": "Lord of the Rings: The Fellowship of the Ring"
+          }
 
 
 DELETE'ing some data from the system
 ------------------------------------
 
-The DELETE http verb is used ::
+The DELETE HTTP verb is used::
 
-    DELETE http://tim-garner.co.uk/api/v1/film/1/
+    DELETE /api/v1/film/{id}/
+
+.. warning::
+
+   You can perform a DELETE against a list, be careful: this will delete *all* objects of that Resource type.
 
 
 Conclusion
@@ -60,4 +86,4 @@ Conclusion
 For this example we have used the Film resource, however the principles can be applied across all Resources provided
 by the system.
 
-The API Documentation has a list of all Resources available.
+The :doc:`api` has a list of all Resources available.

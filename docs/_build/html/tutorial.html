@@ -62,6 +62,7 @@
 <dd><ul class="first last simple">
 <li>Retrieving a list of all films</li>
 <li>Getting some more detail about a single film</li>
+<li>Getting a related resource</li>
 <li>Creating a new film</li>
 <li>Editing some data about a film</li>
 <li>Deleting a film</li>
@@ -75,37 +76,59 @@
 <p>Object lists can be retrieved by querying the parent resource object. Further detail for individual objects is then
 acquired by appending the id to the list resource.</p>
 <p>Some detail resources will even provide nested lists, if appropriate.</p>
-<p>To GET a list of Films post:</p>
-<div class="highlight-python"><pre>GET http://tim-garner.co.uk/api/v1/film/</pre>
+<p>To GET a list of Films:</p>
+<div class="highlight-python"><pre>GET /api/v1/film/</pre>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You can search for film names by appending the ?name parameter and providing a search string</p>
 </div>
 <p>To GET a detailed view of one film:</p>
-<div class="highlight-python"><pre>GET http://tim-garner.co.uk/api/v1/film/1/</pre>
+<div class="highlight-python"><pre>GET /api/v1/film/{id}/</pre>
+</div>
+<p>Resources can point to related objects. A film will have a Film Series resource_uri if it belongs to one.
+You can retrieve this by:</p>
+<div class="highlight-python"><pre>GET /api/v1/filmseries/{id}/</pre>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Append /films/ to the end of a Film Series detail and it will list all Films in that Series.</p>
 </div>
 </div>
 <div class="section" id="post-ing-some-data-into-the-system">
 <h2>POST&#8217;ing some data into the system<a class="headerlink" href="#post-ing-some-data-into-the-system" title="Permalink to this headline">¶</a></h2>
 <p>To create a new film:</p>
-<div class="highlight-python"><pre>POST http://tim-garner.co.uk/api/v1/film/
+<div class="highlight-js"><div class="highlight"><pre><span class="nx">POST</span> <span class="o">/</span><span class="nx">api</span><span class="o">/</span><span class="nx">v1</span><span class="o">/</span><span class="nx">film</span><span class="o">/</span>
 
-data: { "name": "Die Hard" }</pre>
+<span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;Lord of the Rings&quot;</span>
+      <span class="p">}</span>
+</pre></div>
 </div>
 <p>To edit a film:</p>
-<div class="highlight-python"><pre>PATCH http://tim-garner.co.uk/api/v1/film/1
+<div class="highlight-js"><div class="highlight"><pre><span class="nx">PATCH</span> <span class="o">/</span><span class="nx">api</span><span class="o">/</span><span class="nx">v1</span><span class="o">/</span><span class="nx">film</span><span class="o">/</span><span class="p">{</span><span class="nx">id</span><span class="p">}</span><span class="o">/</span>
 
-data: { "name": "Die Hard 2" }</pre>
+<span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;Lord of the Rings: The Fellowship of the Ring&quot;</span>
+      <span class="p">}</span>
+</pre></div>
 </div>
 </div>
 <div class="section" id="delete-ing-some-data-from-the-system">
 <h2>DELETE&#8217;ing some data from the system<a class="headerlink" href="#delete-ing-some-data-from-the-system" title="Permalink to this headline">¶</a></h2>
-<p>The DELETE http verb is used</p>
-<div class="highlight-python"><pre>DELETE http://tim-garner.co.uk/api/v1/film/1/</pre>
+<p>The DELETE HTTP verb is used:</p>
+<div class="highlight-python"><pre>DELETE /api/v1/film/{id}/</pre>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">You can perform a DELETE against a list, be careful: this will delete <em>all</em> objects of that Resource type.</p>
 </div>
 </div>
 <div class="section" id="conclusion">
 <h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
 <p>For this example we have used the Film resource, however the principles can be applied across all Resources provided
 by the system.</p>
-<p>The API Documentation has a list of all Resources available.</p>
+<p>The <a class="reference internal" href="api.html"><em>API Documentation</em></a> has a list of all Resources available.</p>
 </div>
 </div>
 
@@ -115,6 +138,9 @@ by the system.</p>
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/gears.png" alt="Logo"/>
+            </a></p>
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">API Introduction</a><ul>
