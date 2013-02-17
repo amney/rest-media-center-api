@@ -12,7 +12,7 @@ from api.models import Film, FilmSeries, Player
 
 
 class PlayerTest(TestCase):
-    fixtures = ['api/fixtures/pretty_fixtures.json']
+    fixtures = ['api/fixtures/fixtures.json']
 
     def setUp(self):
         self.player = Player.objects.get(pk=1)
@@ -31,7 +31,7 @@ class PlayerTest(TestCase):
 
 
 class FilmResourceTest(ResourceTestCase):
-    fixtures = ['api/fixtures/pretty_fixtures.json']
+    fixtures = ['api/fixtures/fixtures.json']
 
     def setUp(self):
         super(FilmResourceTest, self).setUp()

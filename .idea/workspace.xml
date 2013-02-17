@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e03065e2-c05f-4d0d-8dda-c4997c751d3c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/fixtures/fixtures.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/api/fixtures/pretty_fixtures.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/api.db" afterPath="$PROJECT_DIR$/db/api.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/admin.py" afterPath="$PROJECT_DIR$/api/admin.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/api/fixtures/pretty_fixtures.json" afterPath="$PROJECT_DIR$/api/fixtures/fixtures.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/api_models.py" afterPath="$PROJECT_DIR$/api/api_models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/models.py" afterPath="$PROJECT_DIR$/api/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soft338/settings.py" afterPath="$PROJECT_DIR$/soft338/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/tests.py" afterPath="$PROJECT_DIR$/api/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soft338/urls.py" afterPath="$PROJECT_DIR$/soft338/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="9a375106-136a-4493-82c6-4e78b33fd1b6" name="New changelist" comment="" />
     <ignored path="soft338.iws" />
@@ -21,7 +15,7 @@
     <file path="/urls.py" changelist="e03065e2-c05f-4d0d-8dda-c4997c751d3c" time="1360936424397" ignored="false" />
     <file path="/admin.py" changelist="e03065e2-c05f-4d0d-8dda-c4997c751d3c" time="1361040521070" ignored="false" />
     <file path="/api_models.py" changelist="e03065e2-c05f-4d0d-8dda-c4997c751d3c" time="1361099949091" ignored="false" />
-    <file path="/models.py" changelist="e03065e2-c05f-4d0d-8dda-c4997c751d3c" time="1361049353481" ignored="false" />
+    <file path="/models.py" changelist="e03065e2-c05f-4d0d-8dda-c4997c751d3c" time="1361116327760" ignored="false" />
     <file path="/Django Console" changelist="e03065e2-c05f-4d0d-8dda-c4997c751d3c" time="1361099849319" ignored="false" />
     <file path="$PROJECT_DIR$/../Triathlon Leaderboard/grapher.py" changelist="e03065e2-c05f-4d0d-8dda-c4997c751d3c" time="1360842162309" ignored="false" />
     <file path="/Dummy.txt" changelist="e03065e2-c05f-4d0d-8dda-c4997c751d3c" time="1361099764583" ignored="false" />
@@ -56,7 +50,7 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="109" selection-start="2959" selection-end="2959" vertical-scroll-proportion="0.0">
+            <state line="60" column="0" selection-start="2127" selection-end="2127" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -67,7 +61,7 @@
       <file leaf-file-name="tests.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="25" selection-start="3222" selection-end="3222" vertical-scroll-proportion="0.0">
+            <state line="88" column="25" selection-start="3208" selection-end="3208" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -85,7 +79,7 @@
       <file leaf-file-name="api_models.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/api_models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="114" selection-start="1194" selection-end="1194" vertical-scroll-proportion="-2.1123245">
+            <state line="104" column="46" selection-start="3704" selection-end="3704" vertical-scroll-proportion="0.3118503">
               <folding />
             </state>
           </provider>
@@ -127,8 +121,8 @@
         <option value="$PROJECT_DIR$/api/fixtures/pretty_fixtures.json" />
         <option value="$PROJECT_DIR$/soft338/settings.py" />
         <option value="$PROJECT_DIR$/api/tests.py" />
-        <option value="$PROJECT_DIR$/api/models.py" />
         <option value="$PROJECT_DIR$/api/migrations/0011_auto__add_field_playlist_auto_create_time__add_field_playlist_auto_mod.py" />
+        <option value="$PROJECT_DIR$/api/models.py" />
         <option value="$PROJECT_DIR$/api/api_models.py" />
       </list>
     </option>
@@ -183,7 +177,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -230,26 +223,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="soft338" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="soft338" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fixtures" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -473,22 +449,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="1108" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297619" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929292" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37636763" sideWeight="0.6757576" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37620065" sideWeight="0.67070705" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3242424" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3242424" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929292" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929292" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297619" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -588,11 +564,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/fixtures/fixtures.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="16183" selection-end="16183" vertical-scroll-proportion="0.016216217" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/soft338/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="13" selection-start="1587" selection-end="1587" vertical-scroll-proportion="-0.18711019" />
@@ -603,11 +574,6 @@
         <state line="18" column="5" selection-start="502" selection-end="502" vertical-scroll-proportion="0.28066528" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/fixtures/pretty_fixtures.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="522" column="43" selection-start="20796" selection-end="20806" vertical-scroll-proportion="-6.28" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/migrations/0011_auto__add_field_playlist_auto_create_time__add_field_playlist_auto_mod.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="116" selection-start="722" selection-end="722" vertical-scroll-proportion="0.36082473" />
@@ -615,7 +581,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="25" selection-start="3222" selection-end="3222" vertical-scroll-proportion="0.0">
+        <state line="88" column="25" selection-start="3208" selection-end="3208" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -629,16 +595,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="109" selection-start="2959" selection-end="2959" vertical-scroll-proportion="0.0">
+        <state line="60" column="0" selection-start="2127" selection-end="2127" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/api/fixtures/fixtures.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="522" column="43" selection-start="20796" selection-end="20806" vertical-scroll-proportion="0.3935135">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/api/api_models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="114" selection-start="1194" selection-end="1194" vertical-scroll-proportion="-2.1123245">
+        <state line="104" column="46" selection-start="3704" selection-end="3704" vertical-scroll-proportion="0.3118503">
           <folding />
         </state>
       </provider>

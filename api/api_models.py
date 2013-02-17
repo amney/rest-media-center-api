@@ -115,6 +115,8 @@ class ContentResource(ModelResource):
         queryset = Content.objects.all()
         authorization = Authorization()
         always_return_data = True
+        list_allowed_methods = ['get']
+        detail_allowed_methods = ['get']
 
 class PlaylistResource(ModelResource):
     '''

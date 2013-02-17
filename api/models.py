@@ -45,9 +45,14 @@ class Content(models.Model):
     Object representing a piece of Content in the Database.
     '''
     name = models.CharField(max_length=255, null=False, blank=False)
-    length = models.CharField(max_length=50, null=False, blank=False)
-    file_type = models.CharField(max_length=50, null=False, default='mkv', choices=(('mkv', 'mkv'), ('mp4', 'mp4'), ('avi', 'avi')))
-    quality = models.CharField(max_length=50, null=False, default='TV', choices=(('HDTV', 'HDTV'), ('TV', 'TV'), ('Blu-Ray', 'Blu-Ray')))
+    length = models.CharField(max_length=50, null=False, blank=False,
+                              help_text='Content length represented in string form, for example 30:00')
+    file_type = models.CharField(max_length=50, null=False, default='mkv',
+                                 choices=(('mkv', 'mkv'), ('mp4', 'mp4'), ('avi', 'avi')),
+                                 help_text='Choice of either mkv, mp4 or avi')
+    quality = models.CharField(max_length=50, null=False, default='TV',
+                               choices=(('HDTV', 'HDTV'), ('TV', 'TV'), ('Blu-Ray', 'Blu-Ray')),
+                               help_text='Choice of either HDTV, TV or Blu-Ray')
     frame_rate = models.PositiveIntegerField(null=False, blank=False, default=60)
     plot = models.TextField(blank=True)
 

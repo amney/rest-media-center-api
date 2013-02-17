@@ -1,1 +1,556 @@
-[{"pk": 1, "model": "api.actor", "fields": {"bio": "David Mitchell was born on 14th July 1974 in Salisbury, England. His parents, Ian and Kathy Mitchell, worked as hotel managers in Salisbury. David also has a brother. In 1977 the family moved to Oxford, where his parents taught a course in hotel management at Oxford Brookes University. David was educated at Abingdon School in Oxfordshire. He has been writing comedy material since his schooldays when he used to write comedy sketches with his friends. A year before he went to college, David worked for a while as a proofreader for the Oxford University Press. He studied History at Peterhouse College, Cambridge. Whilst he was studying at Cambridge University he joined the Cambridge Footlights, where he met his comedy partner,Robert Webb. David became President of the Cambridge Footlights and after graduation he and Robert staged a two man show at the Edinburgh Fringe Festival.", "birthday": "1974-07-14", "name": "David Mitchell"}}, {"pk": 2, "model": "api.actor", "fields": {"bio": "Robert Patrick Webb (born 29 September 1972) is an English comedian, actor and writer, and one half of the double act Mitchell and Webb, alongside David Mitchell.", "birthday": "1972-09-29", "name": "Robert Web"}}, {"pk": 3, "model": "api.actor", "fields": {"bio": "Jennifer Joanna Aniston (born February 11, 1969)[3] is an American actress, film director, and producer. Aniston gained worldwide recognition in the 1990s for portraying Rachel Green on the television sitcom Friends, a role which earned her an Emmy Award, a Golden Globe Award, and a Screen Actors Guild Award. Aniston has also enjoyed a successful Hollywood film career. She gained critical acclaim for her performances in the independent films She's the One (1996), Office Space (1999), The Good Girl (2002) and Friends with Money (2006).[4] She has had her greatest commercial successes with the films Bruce Almighty (2003), The Break-Up (2006), Marley & Me (2008), Just Go with It (2011) and Horrible Bosses (2011).[5] Aniston received a star on the Hollywood Walk of Fame on February 22, 2012.[6][7]", "birthday": "1969-02-11", "name": "Jennifer Aniston"}}, {"pk": 4, "model": "api.actor", "fields": {"bio": "Matthew Steven \"Matt\" LeBlanc (born July 25, 1967) is an American actor, best known for his role as Joey Tribbiani on the NBC sitcom Friends and its spin-off Joey. In 2011, LeBlanc began starring as a fictional version of himself in Episodes, a BBC Two/Showtime television series created by Friends co-creator David Crane and Jeffrey Klarik. LeBlanc won a Golden Globe award for his work on Episodes, after being nominated three times for his work as Joey Tribbiani on Friends.\r\n", "birthday": "1967-06-25", "name": "Matt LeBlanc"}}, {"pk": 5, "model": "api.actor", "fields": {"bio": "Actor and musician Bruce Willis is well known for his film appearances as wisecracking or hard-edged characters, often in spectacular action films. Collectively, he has appeared in films that have grossed in excess of $2.5 billion USD placing him in the top ten stars in terms of box office receipts", "birthday": "1955-03-19", "name": "Bruce Willis"}}, {"pk": 6, "model": "api.actor", "fields": {"bio": "Alan Rickman was born on a council estate in Acton, West London to Margaret (Welsh) and Bernard (Irish) Rickman. Alan has an older brother David, a younger brother Michael and a younger sister Sheila. When Alan was 8 years old, his father died. He attended Latymer Upper School on a scholarship. He studied Graphic Design at Chelsea College of Art and Design", "birthday": "1946-02-21", "name": "Alan Rickman"}}, {"pk": 7, "model": "api.actor", "fields": {"bio": "Daniel Jacob Radcliffe was born on July 23rd, 1989 to Alan Radcliffe and Marcia Gresham. He began performing in small school productions as a young boy. Soon enough, he landed a role in David Copperfield, as the young David Copperfield. A couple of years later, he landed a role as Mark Pendel in The Tailor of Panama.", "birthday": "1989-07-23", "name": "Daniel Radcliffe"}}, {"pk": 8, "model": "api.actor", "fields": {"bio": "Rupert Alexander Lloyd Grint was born the elder son of Nigel and Jo Grint. The first of 5 children, Rupert has one brother and 3 sisters. His brother James was born when Rupert was a year old, Georgina and Samantha were born in 1993 and 1996 respectively, and last, but not least, Charlotte, who was born in 1999.", "birthday": "1988-08-24", "name": "Rupert Grint"}}, {"pk": 9, "model": "api.actor", "fields": {"bio": "Emma Charlotte Duerre Watson was born in Paris, France to parents, Jacqueline Luesby and Chris Watson. When Emma was five her parents divorced, and she then moved to Oxfordshire, England with her mother and younger brother, Alexander. Since the divorce, Emma's extended family has grown as her parents both have new partners", "birthday": "1990-04-15", "name": "Emma Watson"}}, {"pk": 1, "model": "api.filmseries", "fields": {"name": "Die Hard Trilogy", "description": "The Trilogy made up of the three original-run Die Hard movies."}}, {"pk": 2, "model": "api.filmseries", "fields": {"name": "Harry Potter Series", "description": "An epic series following the adventures of Harry, Ron and Hermione."}}, {"pk": 1, "model": "api.show", "fields": {"actors": [3, 4], "name": "Friends"}}, {"pk": 2, "model": "api.show", "fields": {"actors": [1, 2], "name": "Peep Show"}}, {"pk": 1, "model": "api.content", "fields": {"plot": "Rachel leaves her fiance, Barry, at the altar and decides to move in with her old friend Monica after meeting the gang in the coffee place 'Central Perk.' Everyone watches Spanish soap operas at Monica's place. Monica, meanwhile, sleeps with Paul the 'Wine Guy' from her work, who turns out to be less than sincere and lies to get her into bed. Chandler and Joey try to get Ross back into dating who is reeling from his divorce from Carol as he found out she is a lesbian. Ross reveals his high school crush on Rachel and mentions asking her out. Rachel discovers independence isn't as easy as she thought and gets a job at the coffee house as a waitress. ", "name": "The Pilot", "file_type": "mp4", "length": "30:00", "frame_rate": 60, "quality": "TV"}}, {"pk": 2, "model": "api.content", "fields": {"plot": "Carol, Ross' lesbian ex-wife, tells him at work that she is pregnant with his child and when he attends the sonogram, is stunned to learn that she wants to give the baby her and her lesbian lover's last names. Monica nearly has a breakdown from stressing when her and Ross' parents come for dinner. Ross and Rachel console each other, as she as to return her engagement ring to Barry and finds out that he and her maid of honor Mindy, went on her honeymoon.", "name": "The One with the Sonogram and the End", "file_type": "mp4", "length": "29:39", "frame_rate": 60, "quality": "TV"}}, {"pk": 3, "model": "api.content", "fields": {"plot": "Monica becomes irritated when everyone likes her new boyfriend Alan, more than she does. Chandler starts smoking again and when the group complains he diverts their attention to their own faults. Phoebe gets money put into her account that isn't hers and when she complains she gets more so she gives it to her homeless friend who buys her a can of soda, only to find a thumb in the can of soda. Phoebe uses the money from the soda company to pay Chandler to quit smoking. ", "name": "The One with the Thumb", "file_type": "mp4", "length": "29:59", "frame_rate": 60, "quality": "TV"}}, {"pk": 4, "model": "api.content", "fields": {"plot": "Ross, upset about it being the anniversary of his first time sleeping with Carol, goes to a hockey game with Chandler and Joey and gets a puck hit in his face so they end up at the hospital. There, Ross reveals Carol is the only woman he's ever slept with. Rachel gets her first pay check but is angry that most of her money went to FICA, and also gets a visit from her old friends, which depresses her further about her new life. To cheer her up, Monica and Phoebe have a slumber party which isn't very fun due to Rachel's depressed state, until the girls spy on the sexy politician across the street (George Stephanopoulos) whose pizza was delivered to them by mistake. ", "name": "The One with George Stephanopoulos", "file_type": "mp4", "length": "31:30", "frame_rate": 60, "quality": "TV"}}, {"pk": 5, "model": "api.content", "fields": {"plot": "Mark has asked Dobby to move in with him, and Jeremy is faced with the prospect of moving out to make way. But Jeremy has been dragging his heels and Mark is increasingly worried that Dobby will move in with his rival, Gerrard, who in illness has become dependent on her company. Last apperance of Gerrard ", "name": "Jeremy Therapised", "file_type": "mkv", "length": "28:59", "frame_rate": 59, "quality": "HDTV"}}, {"pk": 6, "model": "api.content", "fields": {"plot": "Mark gets a lucky break when his book, 'Business Secrets of the Pharaohs', is accepted by a 'publisher', who turns out to be a fraudulent vanity publisher. Jeremy, in an attempt to kick-start his career, enrolls on a life-coaching course. \r\n", "name": "Business Secrets of the Pharaohs", "file_type": "mkv", "length": "31:02", "frame_rate": 59, "quality": "HDTV"}}, {"pk": 7, "model": "api.content", "fields": {"plot": "Simon, Dobby's ex-boyfriend, invites Mark, Dobby, Jeremy and Superhans to join him and his friends for a paintballing weekend. Mark is convinced that Simon is using the weekend as a cover to get back with Dobby, and Jeremy is convinced he can life coach Neil, Simon's best friend.", "name": "The Love Bunker", "file_type": "mkv", "length": "30:20", "frame_rate": 59, "quality": "HDTV"}}, {"pk": 8, "model": "api.content", "fields": {"plot": "Jeremy finally agrees to leave the flat and move in with Superhans. Mark employs a decorator, Andy, played by Liam Noble, to repaint the kitchen, and Jeremy helps out by giving him free 'life-coaching' advice. Meanwhile, Mark enrolls on a business studies evening course and meets Stephanie (played by Josephine Butler), an attractive older woman.", "name": "Big Mad Andy", "file_type": "mkv", "length": "29:18", "frame_rate": 59, "quality": "HDTV"}}, {"pk": 9, "model": "api.content", "fields": {"plot": "Jeremy, desperate to avoid living with Superhans, sparks up an old relationship with Mark's sister Sara, and moves in with her and her five-year-old son, Joshy. Mark, meanwhile, in an attempt to deal with a damp patch on his bedroom wall, launches a campaign to be elected chairman of the freehold committee of Apollo House. Last appearance of Gail. ", "name": "Chairman Mark", "file_type": "mkv", "length": "31:21", "frame_rate": 59, "quality": "HDTV"}}, {"pk": 10, "model": "api.content", "fields": {"plot": "Dobby is offered a job in New York by ex-boyfriend Simon. Uncertain about the offer, Dobby suggests that she and Mark spend a weekend in the country. The perfect time, as far as Jeremy is concerned, to get a few things off his chest. ", "name": "Quantocking II", "file_type": "mkv", "length": "29:45", "frame_rate": 59, "quality": "HDTV"}}, {"pk": 11, "model": "api.content", "fields": {"plot": "John McClane, officer of the NYPD, tries to save wife Holly Gennaro and several others, taken hostage by German terrorist Hans Gruber during a Christmas party at the Nakatomi Plaza in Los Angeles.", "name": "Die Hard", "file_type": "mkv", "length": "1:20:87", "frame_rate": 24, "quality": "Blu-Ray"}}, {"pk": 12, "model": "api.content", "fields": {"plot": "\t\r\nTop 5000\r\nDie Hard 2 (1990)\r\n 124 min  -  Action | Crime | Thriller  -  4 July 1990 (USA)\r\n7.1 Your rating:   -/10   Ratings: 7.1/10 from 162,309 users   Metascore: 67/100 \r\nReviews: 265 user | 112 critic | 17 from Metacritic.com\r\nJohn McClane, officer of the LAPD and hero of the Nakatomi Hostage Crisis, attempts to avert disaster as rogue military officials seize control of Dulles International Airport in Washington, D.C.\r\n", "name": "Die Hard 2", "file_type": "mkv", "length": "1:15:56", "frame_rate": 24, "quality": "Blu-Ray"}}, {"pk": 13, "model": "api.content", "fields": {"plot": "John McClane and a store owner must play a bomber's deadly game as they race around New York while trying to stop him.", "name": "Die Hard: With a Vengeance", "file_type": "mkv", "length": "1:30:19", "frame_rate": 24, "quality": "Blu-Ray"}}, {"pk": 14, "model": "api.content", "fields": {"plot": "Rescued from the outrageous neglect of his aunt and uncle, a young boy with a great destiny proves his worth while attending Hogwarts School of Witchcraft and Wizardry.\r\n", "name": "Harry Potter and the Sorcerer's Stone", "file_type": "mkv", "length": "1:45:12", "frame_rate": 24, "quality": "Blu-Ray"}}, {"pk": 15, "model": "api.content", "fields": {"plot": "Harry ignores warnings not to return to Hogwarts, only to find the school plagued by a series of mysterious attacks and a strange voice haunting him.", "name": "Harry Potter and Chamber of Secrets", "file_type": "mkv", "length": "1:32:54", "frame_rate": 24, "quality": "Blu-Ray"}}, {"pk": 16, "model": "api.content", "fields": {"plot": "It's Harry's third year at Hogwarts; not only does he have a new \"Defense Against the Dark Arts\" teacher, but there is also trouble brewing. Convicted murderer Sirius Black has escaped the Wizards' Prison and is coming after Harry.", "name": "Harry Potter and the Prisoner of Azkaban", "file_type": "mkv", "length": "1:27:31", "frame_rate": 24, "quality": "Blu-Ray"}}, {"pk": 17, "model": "api.content", "fields": {"plot": "Harry finds himself selected as an underaged competitor in a dangerous multi-wizardary school competition.", "name": "Harry Potter and the Goblet of Fire", "file_type": "mkv", "length": "1:36:52", "frame_rate": 24, "quality": "Blu-Ray"}}, {"pk": 1, "model": "api.episode", "fields": {"season": 1, "episode_number": 1, "show": 1}}, {"pk": 2, "model": "api.episode", "fields": {"season": 1, "episode_number": 2, "show": 1}}, {"pk": 3, "model": "api.episode", "fields": {"season": 1, "episode_number": 3, "show": 1}}, {"pk": 4, "model": "api.episode", "fields": {"season": 1, "episode_number": 4, "show": 1}}, {"pk": 5, "model": "api.episode", "fields": {"season": 8, "episode_number": 1, "show": 2}}, {"pk": 6, "model": "api.episode", "fields": {"season": 8, "episode_number": 2, "show": 2}}, {"pk": 7, "model": "api.episode", "fields": {"season": 8, "episode_number": 3, "show": 2}}, {"pk": 8, "model": "api.episode", "fields": {"season": 8, "episode_number": 4, "show": 2}}, {"pk": 9, "model": "api.episode", "fields": {"season": 8, "episode_number": 5, "show": 2}}, {"pk": 10, "model": "api.episode", "fields": {"season": 8, "episode_number": 6, "show": 2}}, {"pk": 11, "model": "api.film", "fields": {"release_date": "1988-07-15", "actors": [5, 6], "film_series": 1}}, {"pk": 12, "model": "api.film", "fields": {"release_date": "1990-07-04", "actors": [5], "film_series": 1}}, {"pk": 13, "model": "api.film", "fields": {"release_date": "1995-05-19", "actors": [5], "film_series": 1}}, {"pk": 14, "model": "api.film", "fields": {"release_date": "2001-12-16", "actors": [6, 7, 8, 9], "film_series": 2}}, {"pk": 15, "model": "api.film", "fields": {"release_date": "2002-11-15", "actors": [6, 7, 8, 9], "film_series": 2}}, {"pk": 16, "model": "api.film", "fields": {"release_date": "2004-06-04", "actors": [6, 7, 8, 9], "film_series": 2}}, {"pk": 17, "model": "api.film", "fields": {"release_date": "2005-11-18", "actors": [6, 7, 8, 9], "film_series": 2}}, {"pk": 1, "model": "api.playlist", "fields": {"auto_create_time": "2013-02-16T19:20:01.482Z", "content": [14, 16, 17], "name": "My Favourite Harry Potter Films", "auto_modify_time": "2013-02-16T19:20:01.482Z"}}, {"pk": 2, "model": "api.playlist", "fields": {"auto_create_time": "2013-02-16T19:20:18.125Z", "content": [7, 8, 9, 10], "name": "Top Peep Show Episodes", "auto_modify_time": "2013-02-16T19:20:18.125Z"}}, {"pk": 3, "model": "api.playlist", "fields": {"auto_create_time": "2013-02-16T19:20:34.198Z", "content": [1, 3, 4], "name": "Funniest Friends episodes", "auto_modify_time": "2013-02-16T19:20:34.198Z"}}, {"pk": 1, "model": "api.player", "fields": {"status": "stopped", "playlist": 2}}]
+[
+    {
+        "pk": 1,
+        "model": "api.actor",
+        "fields": {
+            "bio": "David Mitchell was born on 14th July 1974 in Salisbury, England. His parents, Ian and Kathy Mitchell, worked as hotel managers in Salisbury. David also has a brother. In 1977 the family moved to Oxford, where his parents taught a course in hotel management at Oxford Brookes University. David was educated at Abingdon School in Oxfordshire. He has been writing comedy material since his schooldays when he used to write comedy sketches with his friends. A year before he went to college, David worked for a while as a proofreader for the Oxford University Press. He studied History at Peterhouse College, Cambridge. Whilst he was studying at Cambridge University he joined the Cambridge Footlights, where he met his comedy partner,Robert Webb. David became President of the Cambridge Footlights and after graduation he and Robert staged a two man show at the Edinburgh Fringe Festival.",
+            "birthday": "1974-07-14",
+            "name": "David Mitchell"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.actor",
+        "fields": {
+            "bio": "Robert Patrick Webb (born 29 September 1972) is an English comedian, actor and writer, and one half of the double act Mitchell and Webb, alongside David Mitchell.",
+            "birthday": "1972-09-29",
+            "name": "Robert Web"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.actor",
+        "fields": {
+            "bio": "Jennifer Joanna Aniston (born February 11, 1969)[3] is an American actress, film director, and producer. Aniston gained worldwide recognition in the 1990s for portraying Rachel Green on the television sitcom Friends, a role which earned her an Emmy Award, a Golden Globe Award, and a Screen Actors Guild Award. Aniston has also enjoyed a successful Hollywood film career. She gained critical acclaim for her performances in the independent films She's the One (1996), Office Space (1999), The Good Girl (2002) and Friends with Money (2006).[4] She has had her greatest commercial successes with the films Bruce Almighty (2003), The Break-Up (2006), Marley & Me (2008), Just Go with It (2011) and Horrible Bosses (2011).[5] Aniston received a star on the Hollywood Walk of Fame on February 22, 2012.[6][7]",
+            "birthday": "1969-02-11",
+            "name": "Jennifer Aniston"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.actor",
+        "fields": {
+            "bio": "Matthew Steven \"Matt\" LeBlanc (born July 25, 1967) is an American actor, best known for his role as Joey Tribbiani on the NBC sitcom Friends and its spin-off Joey. In 2011, LeBlanc began starring as a fictional version of himself in Episodes, a BBC Two\/Showtime television series created by Friends co-creator David Crane and Jeffrey Klarik. LeBlanc won a Golden Globe award for his work on Episodes, after being nominated three times for his work as Joey Tribbiani on Friends.\r\n",
+            "birthday": "1967-06-25",
+            "name": "Matt LeBlanc"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.actor",
+        "fields": {
+            "bio": "Actor and musician Bruce Willis is well known for his film appearances as wisecracking or hard-edged characters, often in spectacular action films. Collectively, he has appeared in films that have grossed in excess of $2.5 billion USD placing him in the top ten stars in terms of box office receipts",
+            "birthday": "1955-03-19",
+            "name": "Bruce Willis"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.actor",
+        "fields": {
+            "bio": "Alan Rickman was born on a council estate in Acton, West London to Margaret (Welsh) and Bernard (Irish) Rickman. Alan has an older brother David, a younger brother Michael and a younger sister Sheila. When Alan was 8 years old, his father died. He attended Latymer Upper School on a scholarship. He studied Graphic Design at Chelsea College of Art and Design",
+            "birthday": "1946-02-21",
+            "name": "Alan Rickman"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.actor",
+        "fields": {
+            "bio": "Daniel Jacob Radcliffe was born on July 23rd, 1989 to Alan Radcliffe and Marcia Gresham. He began performing in small school productions as a young boy. Soon enough, he landed a role in David Copperfield, as the young David Copperfield. A couple of years later, he landed a role as Mark Pendel in The Tailor of Panama.",
+            "birthday": "1989-07-23",
+            "name": "Daniel Radcliffe"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "api.actor",
+        "fields": {
+            "bio": "Rupert Alexander Lloyd Grint was born the elder son of Nigel and Jo Grint. The first of 5 children, Rupert has one brother and 3 sisters. His brother James was born when Rupert was a year old, Georgina and Samantha were born in 1993 and 1996 respectively, and last, but not least, Charlotte, who was born in 1999.",
+            "birthday": "1988-08-24",
+            "name": "Rupert Grint"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "api.actor",
+        "fields": {
+            "bio": "Emma Charlotte Duerre Watson was born in Paris, France to parents, Jacqueline Luesby and Chris Watson. When Emma was five her parents divorced, and she then moved to Oxfordshire, England with her mother and younger brother, Alexander. Since the divorce, Emma's extended family has grown as her parents both have new partners",
+            "birthday": "1990-04-15",
+            "name": "Emma Watson"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.filmseries",
+        "fields": {
+            "name": "Die Hard Trilogy",
+            "description": "The Trilogy made up of the three original-run Die Hard movies."
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.filmseries",
+        "fields": {
+            "name": "Harry Potter Series",
+            "description": "An epic series following the adventures of Harry, Ron and Hermione."
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.show",
+        "fields": {
+            "actors": [
+                3,
+                4
+            ],
+            "name": "Friends"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.show",
+        "fields": {
+            "actors": [
+                1,
+                2
+            ],
+            "name": "Peep Show"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.content",
+        "fields": {
+            "plot": "Rachel leaves her fiance, Barry, at the altar and decides to move in with her old friend Monica after meeting the gang in the coffee place 'Central Perk.' Everyone watches Spanish soap operas at Monica's place. Monica, meanwhile, sleeps with Paul the 'Wine Guy' from her work, who turns out to be less than sincere and lies to get her into bed. Chandler and Joey try to get Ross back into dating who is reeling from his divorce from Carol as he found out she is a lesbian. Ross reveals his high school crush on Rachel and mentions asking her out. Rachel discovers independence isn't as easy as she thought and gets a job at the coffee house as a waitress. ",
+            "name": "The Pilot",
+            "file_type": "mp4",
+            "length": "30:00",
+            "frame_rate": 60,
+            "quality": "TV"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.content",
+        "fields": {
+            "plot": "Carol, Ross' lesbian ex-wife, tells him at work that she is pregnant with his child and when he attends the sonogram, is stunned to learn that she wants to give the baby her and her lesbian lover's last names. Monica nearly has a breakdown from stressing when her and Ross' parents come for dinner. Ross and Rachel console each other, as she as to return her engagement ring to Barry and finds out that he and her maid of honor Mindy, went on her honeymoon.",
+            "name": "The One with the Sonogram and the End",
+            "file_type": "mp4",
+            "length": "29:39",
+            "frame_rate": 60,
+            "quality": "TV"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.content",
+        "fields": {
+            "plot": "Monica becomes irritated when everyone likes her new boyfriend Alan, more than she does. Chandler starts smoking again and when the group complains he diverts their attention to their own faults. Phoebe gets money put into her account that isn't hers and when she complains she gets more so she gives it to her homeless friend who buys her a can of soda, only to find a thumb in the can of soda. Phoebe uses the money from the soda company to pay Chandler to quit smoking. ",
+            "name": "The One with the Thumb",
+            "file_type": "mp4",
+            "length": "29:59",
+            "frame_rate": 60,
+            "quality": "TV"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.content",
+        "fields": {
+            "plot": "Ross, upset about it being the anniversary of his first time sleeping with Carol, goes to a hockey game with Chandler and Joey and gets a puck hit in his face so they end up at the hospital. There, Ross reveals Carol is the only woman he's ever slept with. Rachel gets her first pay check but is angry that most of her money went to FICA, and also gets a visit from her old friends, which depresses her further about her new life. To cheer her up, Monica and Phoebe have a slumber party which isn't very fun due to Rachel's depressed state, until the girls spy on the sexy politician across the street (George Stephanopoulos) whose pizza was delivered to them by mistake. ",
+            "name": "The One with George Stephanopoulos",
+            "file_type": "mp4",
+            "length": "31:30",
+            "frame_rate": 60,
+            "quality": "TV"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.content",
+        "fields": {
+            "plot": "Mark has asked Dobby to move in with him, and Jeremy is faced with the prospect of moving out to make way. But Jeremy has been dragging his heels and Mark is increasingly worried that Dobby will move in with his rival, Gerrard, who in illness has become dependent on her company. Last apperance of Gerrard ",
+            "name": "Jeremy Therapised",
+            "file_type": "mkv",
+            "length": "28:59",
+            "frame_rate": 59,
+            "quality": "HDTV"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.content",
+        "fields": {
+            "plot": "Mark gets a lucky break when his book, 'Business Secrets of the Pharaohs', is accepted by a 'publisher', who turns out to be a fraudulent vanity publisher. Jeremy, in an attempt to kick-start his career, enrolls on a life-coaching course. \r\n",
+            "name": "Business Secrets of the Pharaohs",
+            "file_type": "mkv",
+            "length": "31:02",
+            "frame_rate": 59,
+            "quality": "HDTV"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.content",
+        "fields": {
+            "plot": "Simon, Dobby's ex-boyfriend, invites Mark, Dobby, Jeremy and Superhans to join him and his friends for a paintballing weekend. Mark is convinced that Simon is using the weekend as a cover to get back with Dobby, and Jeremy is convinced he can life coach Neil, Simon's best friend.",
+            "name": "The Love Bunker",
+            "file_type": "mkv",
+            "length": "30:20",
+            "frame_rate": 59,
+            "quality": "HDTV"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "api.content",
+        "fields": {
+            "plot": "Jeremy finally agrees to leave the flat and move in with Superhans. Mark employs a decorator, Andy, played by Liam Noble, to repaint the kitchen, and Jeremy helps out by giving him free 'life-coaching' advice. Meanwhile, Mark enrolls on a business studies evening course and meets Stephanie (played by Josephine Butler), an attractive older woman.",
+            "name": "Big Mad Andy",
+            "file_type": "mkv",
+            "length": "29:18",
+            "frame_rate": 59,
+            "quality": "HDTV"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "api.content",
+        "fields": {
+            "plot": "Jeremy, desperate to avoid living with Superhans, sparks up an old relationship with Mark's sister Sara, and moves in with her and her five-year-old son, Joshy. Mark, meanwhile, in an attempt to deal with a damp patch on his bedroom wall, launches a campaign to be elected chairman of the freehold committee of Apollo House. Last appearance of Gail. ",
+            "name": "Chairman Mark",
+            "file_type": "mkv",
+            "length": "31:21",
+            "frame_rate": 59,
+            "quality": "HDTV"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "api.content",
+        "fields": {
+            "plot": "Dobby is offered a job in New York by ex-boyfriend Simon. Uncertain about the offer, Dobby suggests that she and Mark spend a weekend in the country. The perfect time, as far as Jeremy is concerned, to get a few things off his chest. ",
+            "name": "Quantocking II",
+            "file_type": "mkv",
+            "length": "29:45",
+            "frame_rate": 59,
+            "quality": "HDTV"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "api.content",
+        "fields": {
+            "plot": "John McClane, officer of the NYPD, tries to save wife Holly Gennaro and several others, taken hostage by German terrorist Hans Gruber during a Christmas party at the Nakatomi Plaza in Los Angeles.",
+            "name": "Die Hard",
+            "file_type": "mkv",
+            "length": "1:20:87",
+            "frame_rate": 24,
+            "quality": "Blu-Ray"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "api.content",
+        "fields": {
+            "plot": "\t\r\nTop 5000\r\nDie Hard 2 (1990)\r\n 124 min  -  Action | Crime | Thriller  -  4 July 1990 (USA)\r\n7.1 Your rating:   -\/10   Ratings: 7.1\/10 from 162,309 users   Metascore: 67\/100 \r\nReviews: 265 user | 112 critic | 17 from Metacritic.com\r\nJohn McClane, officer of the LAPD and hero of the Nakatomi Hostage Crisis, attempts to avert disaster as rogue military officials seize control of Dulles International Airport in Washington, D.C.\r\n",
+            "name": "Die Hard 2",
+            "file_type": "mkv",
+            "length": "1:15:56",
+            "frame_rate": 24,
+            "quality": "Blu-Ray"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "api.content",
+        "fields": {
+            "plot": "John McClane and a store owner must play a bomber's deadly game as they race around New York while trying to stop him.",
+            "name": "Die Hard: With a Vengeance",
+            "file_type": "mkv",
+            "length": "1:30:19",
+            "frame_rate": 24,
+            "quality": "Blu-Ray"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "api.content",
+        "fields": {
+            "plot": "Rescued from the outrageous neglect of his aunt and uncle, a young boy with a great destiny proves his worth while attending Hogwarts School of Witchcraft and Wizardry.\r\n",
+            "name": "Harry Potter and the Sorcerer's Stone",
+            "file_type": "mkv",
+            "length": "1:45:12",
+            "frame_rate": 24,
+            "quality": "Blu-Ray"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "api.content",
+        "fields": {
+            "plot": "Harry ignores warnings not to return to Hogwarts, only to find the school plagued by a series of mysterious attacks and a strange voice haunting him.",
+            "name": "Harry Potter and Chamber of Secrets",
+            "file_type": "mkv",
+            "length": "1:32:54",
+            "frame_rate": 24,
+            "quality": "Blu-Ray"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "api.content",
+        "fields": {
+            "plot": "It's Harry's third year at Hogwarts; not only does he have a new \"Defense Against the Dark Arts\" teacher, but there is also trouble brewing. Convicted murderer Sirius Black has escaped the Wizards' Prison and is coming after Harry.",
+            "name": "Harry Potter and the Prisoner of Azkaban",
+            "file_type": "mkv",
+            "length": "1:27:31",
+            "frame_rate": 24,
+            "quality": "Blu-Ray"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "api.content",
+        "fields": {
+            "plot": "Harry finds himself selected as an underaged competitor in a dangerous multi-wizardary school competition.",
+            "name": "Harry Potter and the Goblet of Fire",
+            "file_type": "mkv",
+            "length": "1:36:52",
+            "frame_rate": 24,
+            "quality": "Blu-Ray"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.episode",
+        "fields": {
+            "season": 1,
+            "episode_number": 1,
+            "show": 1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.episode",
+        "fields": {
+            "season": 1,
+            "episode_number": 2,
+            "show": 1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.episode",
+        "fields": {
+            "season": 1,
+            "episode_number": 3,
+            "show": 1
+        }
+    },
+    {
+        "pk": 4,
+        "model": "api.episode",
+        "fields": {
+            "season": 1,
+            "episode_number": 4,
+            "show": 1
+        }
+    },
+    {
+        "pk": 5,
+        "model": "api.episode",
+        "fields": {
+            "season": 8,
+            "episode_number": 1,
+            "show": 2
+        }
+    },
+    {
+        "pk": 6,
+        "model": "api.episode",
+        "fields": {
+            "season": 8,
+            "episode_number": 2,
+            "show": 2
+        }
+    },
+    {
+        "pk": 7,
+        "model": "api.episode",
+        "fields": {
+            "season": 8,
+            "episode_number": 3,
+            "show": 2
+        }
+    },
+    {
+        "pk": 8,
+        "model": "api.episode",
+        "fields": {
+            "season": 8,
+            "episode_number": 4,
+            "show": 2
+        }
+    },
+    {
+        "pk": 9,
+        "model": "api.episode",
+        "fields": {
+            "season": 8,
+            "episode_number": 5,
+            "show": 2
+        }
+    },
+    {
+        "pk": 10,
+        "model": "api.episode",
+        "fields": {
+            "season": 8,
+            "episode_number": 6,
+            "show": 2
+        }
+    },
+    {
+        "pk": 11,
+        "model": "api.film",
+        "fields": {
+            "release_date": "1988-07-15",
+            "actors": [
+                5,
+                6
+            ],
+            "film_series": 1
+        }
+    },
+    {
+        "pk": 12,
+        "model": "api.film",
+        "fields": {
+            "release_date": "1990-07-04",
+            "actors": [
+                5
+            ],
+            "film_series": 1
+        }
+    },
+    {
+        "pk": 13,
+        "model": "api.film",
+        "fields": {
+            "release_date": "1995-05-19",
+            "actors": [
+                5
+            ],
+            "film_series": 1
+        }
+    },
+    {
+        "pk": 14,
+        "model": "api.film",
+        "fields": {
+            "release_date": "2001-12-16",
+            "actors": [
+                6,
+                7,
+                8,
+                9
+            ],
+            "film_series": 2
+        }
+    },
+    {
+        "pk": 15,
+        "model": "api.film",
+        "fields": {
+            "release_date": "2002-11-15",
+            "actors": [
+                6,
+                7,
+                8,
+                9
+            ],
+            "film_series": 2
+        }
+    },
+    {
+        "pk": 16,
+        "model": "api.film",
+        "fields": {
+            "release_date": "2004-06-04",
+            "actors": [
+                6,
+                7,
+                8,
+                9
+            ],
+            "film_series": 2
+        }
+    },
+    {
+        "pk": 17,
+        "model": "api.film",
+        "fields": {
+            "release_date": "2005-11-18",
+            "actors": [
+                6,
+                7,
+                8,
+                9
+            ],
+            "film_series": 2
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.playlist",
+        "fields": {
+            "auto_create_time": "2013-02-16T19:20:01.482Z",
+            "content": [
+                14,
+                16,
+                17
+            ],
+            "name": "My Favourite Harry Potter Films",
+            "auto_modify_time": "2013-02-16T19:20:01.482Z"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "api.playlist",
+        "fields": {
+            "auto_create_time": "2013-02-16T19:20:18.125Z",
+            "content": [
+                7,
+                8,
+                9,
+                10
+            ],
+            "name": "Top Peep Show Episodes",
+            "auto_modify_time": "2013-02-16T19:20:18.125Z"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "api.playlist",
+        "fields": {
+            "auto_create_time": "2013-02-16T19:20:34.198Z",
+            "content": [
+                1,
+                3,
+                4
+            ],
+            "name": "Funniest Friends episodes",
+            "auto_modify_time": "2013-02-16T19:20:34.198Z"
+        }
+    },
+    {
+        "pk": 1,
+        "model": "api.player",
+        "fields": {
+            "status": "stopped",
+            "playlist": 2
+        }
+    }
+]
