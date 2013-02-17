@@ -61,6 +61,9 @@ class ShowResource(ModelResource):
         authorization = Authorization()
         always_return_data = True
         resource_name = 'show'
+        filtering = {
+            'name': ['contains', 'exact']
+        }
 
 
 class FilmSeriesResource(ModelResource):
