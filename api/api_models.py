@@ -41,7 +41,7 @@ class ShowResource(ModelResource):
     Appending /episodes/ to the end of a detailed resource will show all episodes belonging to that resource.
     '''
     episodes = fields.ToManyField('api.api_models.EpisodeResource', 'actors', null=True)
-    actors = fields.ToManyField(ActorResource, 'show_set', null=True)
+    actors = fields.ToManyField(ActorResource, 'actors', null=True)
 
     def prepend_urls(self):
         '''

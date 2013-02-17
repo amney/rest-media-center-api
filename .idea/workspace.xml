@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e03065e2-c05f-4d0d-8dda-c4997c751d3c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/api_models.py" afterPath="$PROJECT_DIR$/api/api_models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/tutorial.rst" afterPath="$PROJECT_DIR$/docs/tutorial.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soft338/urls.py" afterPath="$PROJECT_DIR$/soft338/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/views.py" afterPath="$PROJECT_DIR$/api/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/example_client.rst" afterPath="$PROJECT_DIR$/docs/example_client.rst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="9a375106-136a-4493-82c6-4e78b33fd1b6" name="New changelist" comment="" />
     <ignored path="soft338.iws" />
@@ -14,7 +13,7 @@
     <file path="/api.py" changelist="e03065e2-c05f-4d0d-8dda-c4997c751d3c" time="1360418741924" ignored="false" />
     <file path="/urls.py" changelist="e03065e2-c05f-4d0d-8dda-c4997c751d3c" time="1361127174282" ignored="false" />
     <file path="/admin.py" changelist="e03065e2-c05f-4d0d-8dda-c4997c751d3c" time="1361040521070" ignored="false" />
-    <file path="/api_models.py" changelist="e03065e2-c05f-4d0d-8dda-c4997c751d3c" time="1361128510837" ignored="false" />
+    <file path="/api_models.py" changelist="e03065e2-c05f-4d0d-8dda-c4997c751d3c" time="1361132184491" ignored="false" />
     <file path="/models.py" changelist="e03065e2-c05f-4d0d-8dda-c4997c751d3c" time="1361116327760" ignored="false" />
     <file path="/Django Console" changelist="e03065e2-c05f-4d0d-8dda-c4997c751d3c" time="1361099849319" ignored="false" />
     <file path="$PROJECT_DIR$/../Triathlon Leaderboard/grapher.py" changelist="e03065e2-c05f-4d0d-8dda-c4997c751d3c" time="1360842162309" ignored="false" />
@@ -48,17 +47,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="api_models.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/api/api_models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="41" selection-start="3788" selection-end="3788" vertical-scroll-proportion="1.6528066">
-              <folding>
-                <element signature="e#25#57#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="tutorial.rst" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/tutorial.rst">
           <provider selected="true" editor-type-id="text-editor">
@@ -68,11 +56,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/views.py">
+      <file leaf-file-name="example_client.rst" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/example_client.rst">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="25" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0">
+            <state line="44" column="4" selection-start="1881" selection-end="1881" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="api_models.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/api/api_models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="54" selection-start="1498" selection-end="1498" vertical-scroll-proportion="0.42099792">
+              <folding>
+                <element signature="e#25#57#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -101,7 +100,6 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/docs/implementation.rst" />
-        <option value="$PROJECT_DIR$/docs/example_client.rst" />
         <option value="$PROJECT_DIR$/api/admin.py" />
         <option value="$PROJECT_DIR$/api/fixtures/fixtures.json" />
         <option value="$PROJECT_DIR$/api/fixtures/pretty_fixtures.json" />
@@ -114,8 +112,9 @@
         <option value="$PROJECT_DIR$/docs/conf.py" />
         <option value="$PROJECT_DIR$/soft338/urls.py" />
         <option value="$PROJECT_DIR$/api/views.py" />
-        <option value="$PROJECT_DIR$/api/api_models.py" />
         <option value="$PROJECT_DIR$/docs/tutorial.rst" />
+        <option value="$PROJECT_DIR$/docs/example_client.rst" />
+        <option value="$PROJECT_DIR$/api/api_models.py" />
       </list>
     </option>
   </component>
@@ -198,6 +197,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="soft338" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="soft338" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -426,7 +439,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="1108" extended-state="7" />
+    <frame x="0" y="22" width="1920" height="1108" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297619" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -434,7 +447,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929292" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23212379" sideWeight="0.6757576" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23212379" sideWeight="0.6757576" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -588,13 +601,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/example_client.rst">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="116" selection-start="341" selection-end="341" vertical-scroll-proportion="-1.0124805">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/index.rst">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="60" selection-start="1057" selection-end="1057" vertical-scroll-proportion="0.2979719">
@@ -604,7 +610,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="25" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0">
+        <state line="6" column="25" selection-start="166" selection-end="166" vertical-scroll-proportion="0.09355509">
           <folding />
         </state>
       </provider>
@@ -616,9 +622,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/docs/example_client.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="4" selection-start="1881" selection-end="1881" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/api/api_models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="41" selection-start="3788" selection-end="3788" vertical-scroll-proportion="1.6528066">
+        <state line="43" column="54" selection-start="1498" selection-end="1498" vertical-scroll-proportion="0.42099792">
           <folding>
             <element signature="e#25#57#0" expanded="true" />
           </folding>
