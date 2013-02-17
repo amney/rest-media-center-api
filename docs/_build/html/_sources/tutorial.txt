@@ -29,7 +29,7 @@ To GET a list of Films::
 
 .. note::
 
-   You can search for film names by appending the ?name parameter and providing a search string
+   You can search for films by name by appending the ?name parameter and providing a search string
 
 To GET a detailed view of one film::
 
