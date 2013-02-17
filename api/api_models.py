@@ -31,6 +31,7 @@ class EpisodeResource(ModelResource):
         always_return_data = True
         filtering = {
             'show': ALL_WITH_RELATIONS,
+            'name': ['contains', 'exact']
             }
 
 
@@ -103,6 +104,7 @@ class FilmResource(ModelResource):
         always_return_data = True
         filtering = {
             'film_series': ALL_WITH_RELATIONS,
+            'name': ['contains', 'exact']
             }
 
 
