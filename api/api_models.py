@@ -9,6 +9,16 @@ from tastypie import fields
 from api.models import Film, Episode, Show, Actor, Playlist, Content, Player, FilmSeries
 
 
+class ActorResource(ModelResource):
+    '''
+    An Actor is a person that can be tied to many content objects
+    '''
+    class Meta:
+        queryset = Actor.objects.all()
+        authorization = Authorization()
+        always_return_data = True
+
+
 class EpisodeResource(ModelResource):
     '''
     Resource endpoint for Episode. A episode has a resource_uri pointing to the parent show.
@@ -29,7 +39,8 @@ class ShowResource(ModelResource):
     Resource endpoint for Show. A show is made up of one or more episodes. An example would be the 'The Simpsons'.
     Appending /episodes/ to the end of a detailed resource will show all episodes belonging to that resource.
     '''
-    episodes = fields.ToManyField('api.api_models.EpisodeResource', 'episode_set', null=True)
+    episodes = fields.ToManyField('api.api_models.EpisodeResource', 'actors', null=True)
+    actors = fields.ToManyField(ActorResource, 'show_set', null=True)
 
     def prepend_urls(self):
         '''
@@ -57,7 +68,7 @@ class FilmSeriesResource(ModelResource):
     together. An example would be the Lord of The Rings Trilogy.
     Appending /films/ to the end of a detailed resource will show all films belonging to that resource.
     '''
-    films = fields.ToManyField('api.api_models.FilmResource', 'film_set', null=True, full=True)
+    films = fields.ToManyField('api.api_models.FilmResource', 'film_set', null=True)
 
     def prepend_urls(self):
         '''
@@ -84,6 +95,7 @@ class FilmResource(ModelResource):
     series.
     '''
     film_series = fields.ForeignKey(FilmSeriesResource, 'film_series', null=True)
+    actors = fields.ToManyField(ActorResource, 'actors', null=True)
 
     class Meta:
         queryset = Film.objects.all()
@@ -92,16 +104,6 @@ class FilmResource(ModelResource):
         filtering = {
             'film_series': ALL_WITH_RELATIONS,
             }
-
-
-class ActorResource(ModelResource):
-    '''
-    An Actor is a person that can be tied to many content objects
-    '''
-    class Meta:
-        queryset = Actor.objects.all()
-        authorization = Authorization()
-        always_return_data = True
 
 
 class ContentResource(ModelResource):
@@ -118,7 +120,7 @@ class PlaylistResource(ModelResource):
     '''
     Resource endpoint for Playlist. Has an array of 'content' objects. These could either be films or episodes.
     '''
-    content = fields.ToManyField(ContentResource, 'content', null=True, full=True)
+    content = fields.ToManyField(ContentResource, 'content', null=True)
 
     class Meta:
         queryset = Playlist.objects.all()
@@ -129,7 +131,7 @@ class PlaylistResource(ModelResource):
 class PlayerResource(ModelResource):
     '''
     Represents the media player, takes actions to control the playback of media.
-    The 'list' url is overriden to just return one player object as that's all there is!
+    The 'list' url is overridden to just return one player object as that's all there is!
     '''
 
     playlist = fields.ForeignKey(PlaylistResource, 'playlist')
