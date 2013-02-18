@@ -60,6 +60,8 @@
 <dl class="docutils">
 <dt>We will go through:</dt>
 <dd><ul class="first last simple">
+<li>Authenticating</li>
+<li>Authorization</li>
 <li>Retrieving a list of all films</li>
 <li>Getting some more detail about a single film</li>
 <li>Getting a related resource</li>
@@ -70,6 +72,27 @@
 </dd>
 </dl>
 <p>For a detailed look at the structure of the API please see the <a class="reference internal" href="api.html"><em>API Documentation</em></a>.</p>
+<div class="section" id="authentication">
+<h2>Authentication<a class="headerlink" href="#authentication" title="Permalink to this headline">¶</a></h2>
+<p>Authentication is a very import of an API - it defines <em>who</em> is allowed to interact with the API. For the purposes
+of this Coursework I have created an user that can Authenticate with an API Key.</p>
+<p>To Authenticate you can do it either via passing URL parameters, or in a header.</p>
+<p>Using URL Parameters:</p>
+<div class="highlight-python"><pre>GET /{resource}/?username=api&amp;api_key=a112cc8d84bfdcc5d04eefd87ac9b3a81d677f44</pre>
+</div>
+<p>Using a Header:</p>
+<div class="highlight-python"><pre>Authorization: ApiKey api:a112cc8d84bfdcc5d04eefd87ac9b3a81d677f44</pre>
+</div>
+<p>If using the Postman client the Header field would look as such:</p>
+<blockquote>
+<div><img alt="_images/postman.png" src="_images/postman.png" />
+</div></blockquote>
+</div>
+<div class="section" id="authorization">
+<h2>Authorization<a class="headerlink" href="#authorization" title="Permalink to this headline">¶</a></h2>
+<p>Authorization is concerned with <em>what</em> the authenticated user is allowed to do. Luckily the api user we authenticated
+with above has full permissions to do anything!</p>
+</div>
 <div class="section" id="get-ing-some-data-out-of-the-system">
 <h2>GET&#8217;ing some data out of the system<a class="headerlink" href="#get-ing-some-data-out-of-the-system" title="Permalink to this headline">¶</a></h2>
 <p>As this is a RESTful service you can modify resources using the common HTTP verbs GET, POST, PUT, PATCH, DELETE.</p>
@@ -119,9 +142,10 @@ You can retrieve this by:</p>
 <p>To edit a film:</p>
 <div class="highlight-js"><div class="highlight"><pre><span class="nx">PATCH</span> <span class="o">/</span><span class="nx">api</span><span class="o">/</span><span class="nx">v1</span><span class="o">/</span><span class="nx">film</span><span class="o">/</span><span class="p">{</span><span class="nx">id</span><span class="p">}</span><span class="o">/</span>
 
-<span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;Lord of the Rings: The Fellowship of the Ring&quot;</span>
-      <span class="p">}</span>
+<span class="nx">data</span><span class="o">:</span>
+<span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;Lord of the Rings: The Fellowship of the Ring&quot;</span>
+<span class="p">}</span>
 
 <span class="nx">Returns</span> <span class="nx">HTTP</span> <span class="mi">202</span> <span class="nx">Accepted</span> <span class="nx">on</span> <span class="nx">Success</span>
 </pre></div>
@@ -159,6 +183,8 @@ by the system.</p>
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">API Introduction</a><ul>
+<li><a class="reference internal" href="#authentication">Authentication</a></li>
+<li><a class="reference internal" href="#authorization">Authorization</a></li>
 <li><a class="reference internal" href="#get-ing-some-data-out-of-the-system">GET&#8217;ing some data out of the system</a></li>
 <li><a class="reference internal" href="#post-ing-some-data-into-the-system">POST&#8217;ing some data into the system</a></li>
 <li><a class="reference internal" href="#delete-ing-some-data-from-the-system">DELETE&#8217;ing some data from the system</a></li>

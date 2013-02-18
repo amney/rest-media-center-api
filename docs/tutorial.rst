@@ -4,6 +4,8 @@ API Introduction
 The purpose of this guide is to help you get started interacting with the API.
 
 We will go through:
+    - Authenticating
+    - Authorization
     - Retrieving a list of all films
     - Getting some more detail about a single film
     - Getting a related resource
@@ -12,6 +14,33 @@ We will go through:
     - Deleting a film
 
 For a detailed look at the structure of the API please see the :doc:`api`.
+
+Authentication
+--------------
+
+Authentication is a very import of an API - it defines *who* is allowed to interact with the API. For the purposes
+of this Coursework I have created an user that can Authenticate with an API Key.
+
+To Authenticate you can do it either via passing URL parameters, or in a header.
+
+Using URL Parameters::
+
+    GET /{resource}/?username=api&api_key=a112cc8d84bfdcc5d04eefd87ac9b3a81d677f44
+
+Using a Header::
+
+     Authorization: ApiKey api:a112cc8d84bfdcc5d04eefd87ac9b3a81d677f44
+
+If using the Postman client the Header field would look as such:
+
+    .. image:: _static/postman.png
+
+Authorization
+-------------
+
+Authorization is concerned with *what* the authenticated user is allowed to do. Luckily the api user we authenticated
+with above has full permissions to do anything!
+
 
 GET'ing some data out of the system
 -----------------------------------
@@ -74,9 +103,10 @@ To edit a film:
 
     PATCH /api/v1/film/{id}/
 
-    data: {
-            "name": "Lord of the Rings: The Fellowship of the Ring"
-          }
+    data:
+    {
+        "name": "Lord of the Rings: The Fellowship of the Ring"
+    }
 
     Returns HTTP 202 Accepted on Success
 

@@ -5,6 +5,7 @@ from tastypie.utils import trailing_slash
 from tastypie.resources import ALL_WITH_RELATIONS
 from tastypie.resources import ModelResource
 from tastypie.authorization import Authorization
+from tastypie.authentication import ApiKeyAuthentication
 from tastypie import fields
 from api.models import Film, Episode, Show, Actor, Playlist, Content, Player, FilmSeries
 
@@ -28,6 +29,7 @@ class EpisodeResource(ModelResource):
     class Meta:
         queryset = Episode.objects.all()
         authorization = Authorization()
+        authentication = ApiKeyAuthentication()
         always_return_data = True
         filtering = {
             'show': ALL_WITH_RELATIONS,
@@ -59,6 +61,7 @@ class ShowResource(ModelResource):
     class Meta:
         queryset = Show.objects.all()
         authorization = Authorization()
+        authentication = ApiKeyAuthentication()
         always_return_data = True
         resource_name = 'show'
         filtering = {
@@ -90,6 +93,7 @@ class FilmSeriesResource(ModelResource):
     class Meta:
         queryset = FilmSeries.objects.all()
         authorization = Authorization()
+        authentication = ApiKeyAuthentication()
         always_return_data = True
 
 
@@ -104,6 +108,7 @@ class FilmResource(ModelResource):
     class Meta:
         queryset = Film.objects.all()
         authorization = Authorization()
+        authentication = ApiKeyAuthentication()
         always_return_data = True
         filtering = {
             'film_series': ALL_WITH_RELATIONS,
@@ -118,6 +123,7 @@ class ContentResource(ModelResource):
     '''
     class Meta:
         queryset = Content.objects.all()
+        authentication = ApiKeyAuthentication()
         authorization = Authorization()
         always_return_data = True
         list_allowed_methods = ['get']
@@ -131,6 +137,7 @@ class PlaylistResource(ModelResource):
 
     class Meta:
         queryset = Playlist.objects.all()
+        authentication = ApiKeyAuthentication()
         authorization = Authorization()
         always_return_data = True
 
@@ -170,3 +177,6 @@ class PlayerResource(ModelResource):
 
     class Meta:
         queryset = Player.objects.all()
+        authentication = ApiKeyAuthentication()
+        list_allowed_methods = ['get']
+        detail_allowed_methods = []
