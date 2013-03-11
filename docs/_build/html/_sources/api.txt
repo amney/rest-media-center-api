@@ -311,10 +311,7 @@ Player
     There is only *one* Player, you cannot create, update or delete it.
 
 
-.. http:method:: GET /api/v1/player/?action
-
-   :optparam action: Command player to perform action.
-                     Actions available: play, pause, stop, back, next.
+.. http:method:: GET /api/v1/player/
 
    Retrieve Player
 

@@ -68,7 +68,6 @@ command line client designed for interacting with RESTful web-services.</p>
 <li><a class="reference internal" href="#create-a-few-new-episodes-for-the-show-we-made">Create a few new episodes for the show we made</a></li>
 <li><a class="reference internal" href="#add-the-episodes-to-a-playlist">Add the episodes to a playlist</a></li>
 <li><a class="reference internal" href="#delete-the-stuff-we-ve-made">Delete the stuff we&#8217;ve made</a></li>
-<li><a class="reference internal" href="#control-the-media-player">Control the media player</a></li>
 </ul>
 </dd>
 </dl>
@@ -153,20 +152,6 @@ command line client designed for interacting with RESTful web-services.</p>
 </pre></div>
 </div>
 </div>
-<div class="section" id="control-the-media-player">
-<h2>Control the media player<a class="headerlink" href="#control-the-media-player" title="Permalink to this headline">¶</a></h2>
-<p>As there is only one &#8216;player&#8217;, it is represented by one resource at /api/v1/player/. To command you need to pass
-arguments via the ?action parameter</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">player</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">player</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s">&#39;play&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">player</span><span class="p">[</span><span class="s">&#39;status&#39;</span><span class="p">]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="s">&#39;playing&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">player</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">player</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s">&#39;pause&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">player</span><span class="p">[</span><span class="s">&#39;status&#39;</span><span class="p">]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="s">&#39;paused&#39;</span>
-</pre></div>
-</div>
-<p>Available actions are: play, pause, stop, next, back.</p>
-</div>
 </div>
 
 
@@ -187,7 +172,6 @@ arguments via the ?action parameter</p>
 <li><a class="reference internal" href="#create-a-few-new-episodes-for-the-show-we-made">Create a few new episodes for the show we made</a></li>
 <li><a class="reference internal" href="#add-the-episodes-to-a-playlist">Add the episodes to a playlist</a></li>
 <li><a class="reference internal" href="#delete-the-stuff-we-ve-made">Delete the stuff we&#8217;ve made</a></li>
-<li><a class="reference internal" href="#control-the-media-player">Control the media player</a></li>
 </ul>
 </li>
 </ul>

@@ -13,7 +13,6 @@ The path we will be following is:
     - `Create a few new episodes for the show we made`_
     - `Add the episodes to a playlist`_
     - `Delete the stuff we've made`_
-    - `Control the media player`_
 
 You can `download a full copy <http://api.tim-garner.co.uk/docs/example_client.py.zip>`_ of the Example Client to run on your Computer.
 **Remember you will need Python and the Slumber library installed!**
@@ -102,17 +101,3 @@ It's always polite to clean up after yourself, so let's delete all the objects w
     >>> api.show(new_show['id']).delete()
 
 
-Control the media player
-------------------------
-
-As there is only one 'player', it is represented by one resource at /api/v1/player/. To command you need to pass
-arguments via the ?action parameter ::
-
-    >>> player = api.player.get(action='play')
-    >>> print player['status']
-    >>> 'playing'
-    >>> player = api.player.get(action='pause')
-    >>> print player['status']
-    >>> 'paused'
-
-Available actions are: play, pause, stop, next, back.
