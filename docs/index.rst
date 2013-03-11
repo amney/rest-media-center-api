@@ -19,7 +19,7 @@ The API is *not designed to upload any media files* but it is designed to:
 **Interact with, and manipulate the metadata associated with stored media, organize into playlists, and control the
 playback of media on the Media Center device.**
 
-**The API is available at** ``http://api.tim-garner.co.uk/``
+**The API is available at** ``http://api.tim-garner.co.uk/api/v1/``
 
 
 Documentation Contents

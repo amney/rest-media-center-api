@@ -35,6 +35,13 @@ If using the Postman client the Header field would look as such:
 
     .. image:: _static/postman.png
 
+You can also use HTTP Basic Authentication. While this is not great for a real-world API (as it is insecure) it is fine
+for the purposes of the Coursework.
+
+You will need to set the Header Authorization to Username 'api' Password 'api'. If using Postman it would look as such:
+
+    .. image:: _static/basic_auth.png
+
 Authorization
 -------------
 
